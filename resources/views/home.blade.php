@@ -23,6 +23,18 @@
             <li><a href="#">Login</a></li>
         </ul>
     </nav>
+
+    
+    <!-- Healthy Foods -->
+    <section class="section">
+        <h2>Healthy Food Picks</h2>
+        <div class="card-container">
+            <div class="card">Modhu (Honey)</div>
+            <div class="card">Badam (Nuts)</div>
+            <div class="card">Honeynuts Mix</div>
+            <div class="card">Herbal Tea</div>
+        </div>
+    </section>
 </header>
 
 </body>
