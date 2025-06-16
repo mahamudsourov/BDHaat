@@ -60,3 +60,31 @@ body {
     font-weight: 500;
 }
 
+
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card, .product-card {
+    background-color: #fff;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
