@@ -31,6 +31,17 @@
         <a href="#" class="btn">Explore Now</a>
     </section>
     
+    <!-- District Categories -->
+    <section class="section">
+        <h2>Explore by District</h2>
+        <div class="card-container">
+            <div class="card">Jamdani (Narayanganj)</div>
+            <div class="card">Sweets (Tangail)</div>
+            <div class="card">Clay Crafts (Rajshahi)</div>
+            <div class="card">Shataranji (Rangpur)</div>
+        </div>
+    </section>
+
     <!-- Healthy Foods -->
     <section class="section">
         <h2>Healthy Food Picks</h2>
