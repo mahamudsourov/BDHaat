@@ -10,7 +10,6 @@
 
     <!-- Navbar -->
     <header class="navbar">
-<<<<<<< HEAD
         <div class="navbar-container">
             <div class="navbar-brand">
                 <img src="{{ asset('images/logo.png') }}" alt="BDHaaT Logo">
@@ -25,48 +24,6 @@
                     <li><a href="#">Login</a></li>
                 </ul>
             </nav>
-=======
-    <div class="navbar-brand">
-        <img src="{{ asset('images/logo.png') }}" alt="BDHaaT Logo" /> 
-        <span>BDHaaT</span>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">District Products</a></li>
-            <li><a href="#">Healthy Foods</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Banner -->
-    <section class="hero">
-        <h1>Welcome to DeshBazar</h1>
-        <p>Discover Bangladesh's traditional & healthy treasures</p>
-        <a href="#" class="btn">Explore Now</a>
-    </section>
-    
-    <!-- District Categories -->
-    <section class="section">
-        <h2>Explore by District</h2>
-        <div class="card-container">
-            <div class="card">Jamdani (Narayanganj)</div>
-            <div class="card">Sweets (Tangail)</div>
-            <div class="card">Clay Crafts (Rajshahi)</div>
-            <div class="card">Shataranji (Rangpur)</div>
-        </div>
-    </section>
-
-    <!-- Healthy Foods -->
-    <section class="section">
-        <h2>Healthy Food Picks</h2>
-        <div class="card-container">
-            <div class="card">Modhu (Honey)</div>
-            <div class="card">Badam (Nuts)</div>
-            <div class="card">Honeynuts Mix</div>
-            <div class="card">Herbal Tea</div>
->>>>>>> 3f45e8907d1e5908a2aeb619ebd97ec76143ff69
         </div>
     </header>
 
@@ -102,6 +59,33 @@
                 <img src="{{ asset('images/tea.jpg') }}" alt="Sylhet Tea">
                 <p>Tea</p>
                 <p>Sylhet</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Healthy Foods -->
+    <section class="section">
+        <h2>Healthy Food Picks</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ asset('images/chomchom.jpg') }}" alt="Modhu">
+                <p>Modhu</p>
+
+            </div>
+            <div class="card">
+                <img src="{{ asset('images/bakarkhani.jpg') }}" alt="Badam">
+                <p>Badam</p>
+                
+            </div>
+            <div class="card">
+                <img src="{{ asset('images/doi.jpg') }}" alt="Honeynuts Mix">
+                <p>Honeynuts mix</p>
+                
+            </div>
+            <div class="card">
+                <img src="{{ asset('images/tea.jpg') }}" alt="Herbal Tea">
+                <p>Herbal Tea</p>
+                
             </div>
         </div>
     </section>
