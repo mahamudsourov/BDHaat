@@ -9,7 +9,7 @@ body {
     background-color: #0a6847;
     padding: 15px 30px;
     color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -77,6 +77,54 @@ body {
     font-size: 18px;
 }
 
+/* district_section starts*/
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+/* district_section ends*/ 
+
 /* Food Cards */
 .section {
     padding: 30px 20px;
@@ -122,4 +170,3 @@ body {
     font-weight: bold;
     color: #0a6847;
 }
-

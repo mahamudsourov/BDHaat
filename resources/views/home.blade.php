@@ -34,10 +34,39 @@
             <p>Explore Traditional & Healthy Foods from Every District of Bangladesh</p>
         </div>
     </section>
+    
+    <!-- District Categories starts -->
+<section class="section">
+    <h2>Explore by District</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://www.loomfolks.com/wp-content/uploads/2023/07/Olive-Green-Dhakai-Jamdani-Light-Weight-Cotton-Silk-Saree-Without-Blouse.jpg" alt="Jamdani from Narayanganj">
+            <h3>Jamdani</h3>
+            <p>Narayanganj</p>
+        </div>
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/lJHOGtA-xgY/maxresdefault.jpg" alt="Sweets from Tangail">
+            <h3>Sweets</h3>
+            <p>Tangail</p>
+        </div>
+        <div class="card">
+            <img src="https://www.tazahaat.com/wp-content/uploads/2019/05/61217290_1313129705508223_8538348139239702528_o.jpg" alt="Clay Crafts from Rajshahi">
+            <h3>Mango</h3>
+            <p>Rajshahi</p>
+        </div>
+        <div class="card">
+            <img src="https://en.banglapedia.org/images/2/2d/Shataranjee.jpg" alt="Shataranji from Rangpur">
+            <h3>Shataranji</h3>
+            <p>Rangpur</p>
+        </div>
+    </div>
+</section>
+
+<!-- District Categories ends-->
 
     <!-- Food Cards Section -->
     <section class="section">
-        <h2>Top Picks from Our Districts</h2>
+        <h2>Popular Products</h2>
         <div class="card-container">
             <div class="card">
                 <img src="{{ asset('images/chomchom.jpg') }}" alt="Chomchom">
