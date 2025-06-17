@@ -119,5 +119,10 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 BDHaaT. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
