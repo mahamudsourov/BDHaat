@@ -24,6 +24,12 @@
         </ul>
     </nav>
 
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Welcome to DeshBazar</h1>
+        <p>Discover Bangladesh's traditional & healthy treasures</p>
+        <a href="#" class="btn">Explore Now</a>
+    </section>
     
     <!-- Healthy Foods -->
     <section class="section">
