@@ -37,3 +37,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.error-msg {
+    color: red;
+    display: none;
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("loginForm");
     const errorMsg = document.getElementById("errorMsg");
+    const registerMsg = document.getElementById("registerMsg");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -10,14 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (email === "" || password === "") {
             errorMsg.style.display = "block";
-        } else {
-            errorMsg.style.display = "none";
-            alert("Login successful.");
+            registerMsg.style.display = "none";
+            return;
         }
-    });
 
-    document.getElementById("togglePassword").addEventListener("change", function () {
-        const passwordInput = document.getElementById("password");
-        passwordInput.type = this.checked ? "text" : "password";
+        const registeredEmail = "test@example.com";
+        const registeredPassword = "123456";
+
+        if (email === registeredEmail && password === registeredPassword) {
+            alert("Login successful.");
+            errorMsg.style.display = "none";
+            registerMsg.style.display = "none";
+        } else {
+            registerMsg.style.display = "block";
+            errorMsg.style.display = "none";
+        }
     });
 });

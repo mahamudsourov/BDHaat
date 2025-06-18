@@ -12,11 +12,15 @@
     <form id="loginForm">
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
-        
 
         <button type="submit">Login</button>
-        <p id="errorMsg" style="color:red; display:none;">All fields are required.</p>
+
+        <p id="errorMsg" class="error-msg">All fields are required.</p>
+        <p id="registerMsg" class="error-msg">You must register</a> first.</p>
     </form>
+    <p class="switch-link">
+        Don’t have an account? <a href="{{ route('register') }}">Register</a>
+    </p>
 </div>
 
 <script src="{{ asset('js/login.js') }}"></script>
