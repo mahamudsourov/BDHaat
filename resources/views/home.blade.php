@@ -21,7 +21,8 @@
                     <li><a href="#">District Products</a></li>
                     <li><a href="#">Healthy Foods</a></li>
                     <li><a href="#">Cart</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li>
+
                 </ul>
             </nav>
         </div>
