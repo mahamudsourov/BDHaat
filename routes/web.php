@@ -17,7 +17,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-// ✅ Register Page
+// Register Page
 Route::get('/register', function () {
     return view('register');
 })->name('register');

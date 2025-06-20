@@ -21,7 +21,8 @@
                     <li><a href="#">District Products</a></li>
                     <li><a href="#">Healthy Foods</a></li>
                     <li><a href="#">Cart</a></li>
-                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="#" id="openLoginBtn">Login</a></li>
+
 
                 </ul>
             </nav>
@@ -62,8 +63,6 @@
         </div>
     </div>
 </section>
-
-<!-- District Categories ends-->
 
     <!-- Food Cards Section -->
     <section class="section">
@@ -124,6 +123,26 @@
     <footer class="footer">
         <p>&copy; 2025 BDHaaT. All rights reserved.</p>
     </footer>
+<!-- Login Modal -->
+<div id="loginModal" class="login-modal">
+    <div class="login-container">
+        <span id="closeLoginBtn" class="close-btn">&times;</span>
+        <h2>Login to BDHaaT</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+
+            <p id="errorMsg" class="error-msg">All fields are required.</p>
+            <p id="registerMsg" class="error-msg">You must register first.</p>
+        </form>
+        <p class="switch-link">
+            Don’t have an account? <a href="{{ route('register') }}">Register</a>
+        </p>
+    </div>
+</div>
+<script src="{{ asset('js/login.js') }}"></script>
 
 </body>
 </html>
