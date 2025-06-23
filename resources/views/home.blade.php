@@ -64,8 +64,8 @@
             <div class="pro">
                 <img src="img/products/f1.jpg" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Punjab-1</span>
+                    <h5>BDHaat-Authentic</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -81,8 +81,8 @@
             <div class="pro">
                 <img src="img/products/f2.jpg" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Saree</span>
+                    <h5>Tangail</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -115,8 +115,8 @@
             <div class="pro">
                 <img src="img/products/f4.jpg" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Punjabi-2</span>
+                    <h5>Dhaka</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -132,8 +132,8 @@
             <div class="pro">
                 <img src="img/products/f5.jpg" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Honey</span>
+                    <h5>Healthy Food</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
