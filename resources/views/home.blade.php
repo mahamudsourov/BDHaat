@@ -30,3 +30,28 @@
             </div>
             <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
+        
+     <!-- Right: Navigation -->
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">Traditional Products</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Foods</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Healthy Foods</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </section>
+
+    <section id="hero">
+        <h1>Easy way to Shop</h1>
+        <h1>Choose your Products</h1>
+        <p>Save more with coupons & up to 60% off!</p>
+    </section>
