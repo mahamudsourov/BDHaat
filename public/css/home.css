@@ -69,3 +69,77 @@
         body {
             width: 100%;
         }
+ /* Header Layout */
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            background: #ebeef2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            flex-wrap: wrap;
+        }
+
+        /* Logo and Brand Name */
+
+        #logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00704a;
+        }
+
+        /* Center: Search Bar + Cart */
+        
+        #search-cart {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background: white;
+        }
+
+        #search-bar {
+            padding: 8px 12px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            width: 220px;
+        }
+
+        #search-button {
+            background: #088178;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #cart-icon {
+            font-size: 20px;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        #cart-icon:hover {
+            color: #088178;
+        }
