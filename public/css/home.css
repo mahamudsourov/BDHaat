@@ -1,253 +1,71 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Spartan", sans-serif;
+        }
 
-/* Navbar */
-.navbar {
-    background-color: #0a6847;
-    padding: 15px 30px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        h2 {
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+        h4 {
+            font-size: 20px;
+            color: #222;
+        }
 
-.navbar-brand img {
-    height: 40px;
-    margin-right: 10px;
-}
+        h6 {
+            font-weight: 700;
+            font-size: 12px;
+        }
 
-.brand-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
+        p {
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        .section-p1 {
+            padding: 40px 80px;
+        }
 
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+        .section-m1 {
+            margin: 40px 0;
+        }
 
-.nav-links li a:hover {
-    color: #d4edda;
-}
+        button.normal {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
 
-/* Banner Section */
-.banner {
-    background: url('../images/background.jpg') no-repeat center center/cover;
-    height: 350px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+        button.white {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: #fff;
+            background-color: transparent;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            transition: 0.2s;
+        }
 
-.banner .overlay {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 40px;
-    color: white;
-}
-
-.banner h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.banner p {
-    font-size: 18px;
-}
-
-/* district_section starts*/
-
-.section {
-    padding: 40px;
-    text-align: center;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    width: 200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
-    background-color: #fff;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.card h3 {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-}
-
-.card p {
-    font-size: 0.95rem;
-    color: #555;
-}
-/* Food Cards */
-.section {
-    padding: 30px 20px;
-    text-align: center;
-    background-color: #e7e7ed;
-}
-
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #0a6847;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.card p {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #0a6847;
-}
-.product-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.product-card span {
-    font-weight: bold;
-    color: #00704A;
-}
-
-.footer {
-    background-color: #00704A;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* Login  */
-
-.login-modal {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(232, 230, 230, 0.7);
-    transition: top 0.4s ease;
-    z-index: 9999;
-}
-
-.login-modal.show {
-    top: 0;
-}
-
-.login-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    margin: 100px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    color: #444;
-    cursor: pointer;
-}
-
-.login-container input,
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.login-container button {
-    background-color: #0a6847;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.error-msg {
-    color: red;
-    display: none;
-    text-align: center;
-}
-
-.switch-link {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-}
+        body {
+            width: 100%;
+        }
