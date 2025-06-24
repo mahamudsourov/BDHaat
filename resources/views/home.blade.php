@@ -231,7 +231,7 @@
 
     <section id="product1" class="section-p1">
         <h2>New Arrivals</h2>
-        <p>Summer Collection New Modern Design</p>
+        <p>fresh fruits and Traditional Foods</p>
         <div class="pro-container">
             <div class="pro">
                 <img src="{{ asset('images/তিলখাওয়া খাজা1.jpeg') }}" alt="" />
