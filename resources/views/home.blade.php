@@ -80,7 +80,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section>
 
     <!-- Trending Product -->
     <section id="product1" class="section-p1">
@@ -88,10 +88,10 @@
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="img/products/f1.jpg" alt="" />
+                <img src="{{ asset('images/punjabi1.jpg') }}" alt="" />
                 <div class="des">
-                    <span>Punjab-1</span>
-                    <h5>BDHaat-Authentic</h5>
+                    <span>BDHaat-Authentic</span>
+                    <h5>Punjabi-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -104,11 +104,12 @@
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
+
             <div class="pro">
-                <img src="img/products/f2.jpg" alt="" />
+                <img src="{{ asset('images/saree1.jpg') }}" alt="" />
                 <div class="des">
-                    <span>Saree</span>
-                    <h5>Tangail</h5>
+                    <span>Tangail</span>
+                    <h5>Sari-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -122,10 +123,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f3.jpg" alt="" />
+                <img src="{{ asset('images/chomchom.jpg') }}" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Tangail</span>
+                    <h5>Chomchom</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -139,10 +140,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f4.jpg" alt="" />
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
                 <div class="des">
-                    <span>Punjabi-2</span>
-                    <h5>Dhaka</h5>
+                    <span>Dhaka</span>
+                    <h5>Punjabi-2</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -156,10 +157,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f5.jpg" alt="" />
+                <img src="{{ asset('images/honey1.avif') }}" alt="" />
                 <div class="des">
-                    <span>Honey</span>
-                    <h5>Healthy Food</h5>
+                    <span>Healthy Food</span>
+                    <h5>Honey</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -173,10 +174,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f6.jpg" alt="" />
+                <img src="{{ asset('images/sweets1.jpg') }}" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>T-Shirts</h5>
+                    <span>Cumilla</span>
+                    <h5>Sweets1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -190,10 +191,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f7.jpg" alt="" />
+                <img src="{{ asset('images/khejur1.jpg') }}" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Ladies paint</h5>
+                    <span>Healthy Foods</span>
+                    <h5>Khejur-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -207,10 +208,10 @@
             </div>
 
             <div class="pro">
-                <img src="img/products/f8.jpg" alt="" />
+                <img src="{{ asset('images/mango1.jpeg') }}" alt="" />
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Dress</h5>
+                    <span>Rajshahi</span>
+                    <h5>Mango-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
