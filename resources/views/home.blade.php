@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=vz, initial-scale=1.0" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <title>BDHaat</title>
 
 </head>
@@ -45,7 +45,7 @@
 
             <li><a href="#">Healthy Foods</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="#" id="openLoginBtn">Login</a></li>
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </section>
@@ -286,5 +286,33 @@
         </div>
     </footer>
 </body>
+<!-- Login Modal -->
+<div id="loginModal" class="login-modal">
+    <div class="login-modal-content slide-down">
+        <span class="close" id="closeLoginBtn">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+
+            <p id="errorMsg" class="error-text">All fields are required.</p>
+            <p id="registerMsg" class="error-text">Registered First!</p>
+
+            <p class="register-link">
+                Don’t have an account?
+                <a href="signup.html">Register here</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<script src="{{ asset('js/login.js') }}"></script>
+
+
 
 </html>

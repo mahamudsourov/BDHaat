@@ -15,18 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (closeLoginBtn) {
         closeLoginBtn.addEventListener("click", () => {
             loginModal.classList.remove("show");
+            errorMsg.style.display = "none";
+            registerMsg.style.display = "none";
         });
     }
 
     if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
+
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
+            errorMsg.style.display = "none";
+            registerMsg.style.display = "none";
 
             if (email === "" || password === "") {
                 errorMsg.style.display = "block";
-                registerMsg.style.display = "none";
                 return;
             }
 
@@ -35,12 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (email === registeredEmail && password === registeredPassword) {
                 alert("Login successful.");
-                errorMsg.style.display = "none";
-                registerMsg.style.display = "none";
-                if (loginModal) loginModal.classList.remove("show");
+                loginModal.classList.remove("show");
             } else {
-                registerMsg.style.display = "block";
-                errorMsg.style.display = "none";
+                registerMsg.style.display = "block"; 
             }
         });
     }
