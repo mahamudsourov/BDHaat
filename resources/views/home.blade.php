@@ -227,6 +227,81 @@
     </section>
 
     <!-- BD mart -->
+    <!-- New Arrival -->
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="{{ asset('images/তিলখাওয়া খাজা1.jpeg') }}" alt="" />
+                <div class="des">
+                    <span>Khaja</span>
+                    <h5>Foods</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 160</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/honeyNuts1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Honeynuts</span>
+                    <h5>Healthy Foods</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 999</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/মহিষ দুধের ঘি1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Mohisher Dudher Ghee</span>
+                    <h5>Traditional Foods</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 950</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/mango2.jpeg') }}" alt="" />
+                <div class="des">
+                    <span>Rajshahi Mango</span>
+                    <h5>Fruits</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 250</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
 
