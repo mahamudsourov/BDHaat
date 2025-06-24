@@ -55,6 +55,32 @@
         <h1>Choose your Products</h1>
         <p>Save more with coupons & up to 60% off!</p>
     </section>
+    <!-- Why Shop -->
+
+    <section class="why-shop">
+        <h2 class="section-title">Why Shop With Us</h2>
+        <div class="features">
+            <div class="feature-box">
+                <i class="fas fa-truck-fast icon"></i>
+                <h3>Fast Delivery</h3>
+                <p>We deliver your products quickly and safely to your doorstep.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-box-open icon"></i>
+                <h3>Free Shipping</h3>
+                <p>
+                    Enjoy free shipping on all your orders with no minimum purchase.
+                </p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-award icon"></i>
+                <h3>Best Quality</h3>
+                <p>
+                    Our products are made with top-quality materials and craftsmanship.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- Trending Product -->
     <section id="product1" class="section-p1">
