@@ -92,6 +92,13 @@ body {
     gap: 10px;
 }
 
+#logo-area img {
+    border-radius: 50%; 
+    border: 2px solid #088178; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
 .brand-name {
     font-size: 24px;
     font-weight: bold;
