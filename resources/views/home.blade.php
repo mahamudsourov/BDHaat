@@ -386,6 +386,37 @@
     </div>
 </div>
 
+<!-- Register Modal -->
+<div id="registerModal" class="login-modal">
+    <div class="login-modal-content slide-down">
+        <span class="close" id="closeRegisterBtn">&times;</span>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="regName">Name</label>
+            <input type="text" id="regName" placeholder="Enter your name" required>
+
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" placeholder="Enter your email" required>
+
+            <label for="regPhone">Phone</label>
+            <input type="text" id="regPhone" placeholder="Enter your phone number" required>
+
+            <label for="regAddress">Address</label>
+            <input type="text" id="regAddress" placeholder="Enter your address" required>
+
+            <button type="submit">Register</button>
+
+            <p class="error-text" id="registerErrorMsg">Please fill all fields.</p>
+
+            <p class="register-link">
+                Already have an account?
+                <a href="#" id="switchToLogin">Login here</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+
 <script src="{{ asset('js/login.js') }}"></script>
 
 
