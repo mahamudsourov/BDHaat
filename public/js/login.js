@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const openLoginBtn = document.getElementById("openLoginBtn");
     const closeLoginBtn = document.getElementById("closeLoginBtn");
     const closeRegisterBtn = document.getElementById("closeRegisterBtn");
+    const openRegisterBtn = document.getElementById("openRegisterBtn");
 
     // Forms and error messages
     const loginForm = document.getElementById("loginForm");
@@ -25,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             loginModal.classList.add("show");
         });
     }
+
+    // Show register modal
+    if (openRegisterBtn) {
+    openRegisterBtn.addEventListener("click", () => {
+        registerModal.classList.add("show");
+    });
+}
 
     // Close login modal
     if (closeLoginBtn) {

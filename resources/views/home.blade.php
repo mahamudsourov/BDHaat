@@ -46,7 +46,7 @@
             <li><a href="#">Healthy Foods</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#" id="openLoginBtn">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
         </ul>
     </section>
 
@@ -361,6 +361,7 @@
         </div>
     </footer>
 </body>
+
 <!-- Login Modal -->
 <div id="loginModal" class="login-modal">
     <div class="login-modal-content slide-down">
@@ -379,7 +380,7 @@
             <p id="registerMsg" class="error-text">Registered First!</p>
 
             <p class="register-link">
-                Don’t have an account?
+                Don't have an account?
                 <a href="signup.html">Register here</a>
             </p>
         </form>
