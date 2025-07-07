@@ -99,9 +99,9 @@
 .error-text {
     color: red;
     text-align: center;
-    margin-top: -5px;
+    margin-top: 10px;
     display: none;
-    font-size: 14px;
+    font-size: 14px; 
 }
 .register-link {
     text-align: center;
@@ -121,11 +121,30 @@
     text-decoration: underline;
     color: #094e38;
 }
-.error-text {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
-    text-align: center;
-}
 
+@media (max-width: 480px) {
+    .login-modal-content {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .login-modal-content h2 {
+        font-size: 20px;
+    }
+
+    .login-modal-content input,
+    .login-modal-content button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .close {
+        font-size: 20px;
+        top: 8px;
+        right: 10px;
+    }
+
+    .register-link {
+        font-size: 13px;
+    }
+}
