@@ -22,6 +22,18 @@ Food Page:
             </a>
             <span class="brand-name">BDHaat</span>
         </div>
+
+
+        <!-- Center: Search Bar + Search Icon + Cart -->
+        <div id="search-cart">
+            <div class="search-box">
+                <input type="text" placeholder="Search products..." id="search-bar" />
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+        
 </body>
 
 </html>
