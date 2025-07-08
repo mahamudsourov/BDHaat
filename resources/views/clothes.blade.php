@@ -159,7 +159,7 @@
                 <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
                 <div class="des">
                     <span>Dhaka</span>
-                    <h5>Panjabi-2-1</h5>
+                    <h5>Panjabi-2</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
