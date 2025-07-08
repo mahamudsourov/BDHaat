@@ -1,5 +1,3 @@
-Food Page:
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,9 +46,152 @@ Food Page:
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
         </ul>
+    </section>kkk
+
+    <section id="product1" class="section-p1">
+        <h2>Traditional Foods</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="{{ asset('images/punjabi1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>BDHaat-Authentic</span>
+                    <h5>Punjabi-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 890</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+
+            <div class="pro">
+                <img src="{{ asset('images/saree1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Tangail</span>
+                    <h5>Sari-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 790</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/chomchom.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Tangail</span>
+                    <h5>Chomchom</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1050</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
+                <div class="des">
+                    <span>Dhaka</span>
+                    <h5>Punjabi-2</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 990</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/honey1.avif') }}" alt="" />
+                <div class="des">
+                    <span>Healthy Food</span>
+                    <h5>Honey</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 840</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/sweets1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Cumilla</span>
+                    <h5>Sweets1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1280</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/khejur1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Healthy Foods</span>
+                    <h5>Khejur-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1950</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/mango1.jpeg') }}" alt="" />
+                <div class="des">
+                    <span>Rajshahi</span>
+                    <h5>Mango-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 3150</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
     </section>
 
-    
+
 </body>
 
 </html>
