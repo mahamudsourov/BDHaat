@@ -96,3 +96,12 @@
     background: #fafafa;
     transition: all 0.3s ease;
 }
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #fff;
+    border-color: #024ecf;
+    box-shadow: 0 0 0 3px rgba(2, 78, 207, 0.1);
+    outline: none;
+}
