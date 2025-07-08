@@ -122,7 +122,41 @@ Healthy Food:
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
+            <div class="pro">
+                <img src="{{ asset('images/honey1.avif') }}" alt="" />
+                <div class="des">
+                    <span>Healthy Food</span>
+                    <h5>Honey</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 840</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
 
+            <div class="pro">
+                <img src="{{ asset('images/sweets1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Cumilla</span>
+                    <h5>Sweets1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1280</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            
         </div>
     </section>
 
