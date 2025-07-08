@@ -1,5 +1,3 @@
-Contact Page:
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +54,16 @@ Contact Page:
         <p>We love to hear from you!</p>
     </section>
 
+    <section class="about-section">
+        <div class="about-container">
+            <h3 class="about-title">About Us</h3>
+            <p class="about-text">
+                We are dedicated to preserving tradition and delivering quality. Our team works with passion to bring
+                you authentic traditional products crafted with care and excellence.
+            </p>
+        </div>
+    </section>
+
 
 </body>
-
 </html>
