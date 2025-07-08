@@ -50,5 +50,81 @@ Healthy Food:
         </ul>
     </section>
 
+    <section id="product1" class="section-p1">
+        <h2>Healthy Foods</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="{{ asset('images/punjabi1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>BDHaat-Authentic</span>
+                    <h5>Punjabi-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 890</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+
+            <div class="pro">
+                <img src="{{ asset('images/saree1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Tangail</span>
+                    <h5>Sari-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 790</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/chomchom.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Tangail</span>
+                    <h5>Chomchom</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1050</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
+                <div class="des">
+                    <span>Dhaka</span>
+                    <h5>Punjabi-2</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 990</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+        </div>
+    </section>
+
 </body>
 </html>
