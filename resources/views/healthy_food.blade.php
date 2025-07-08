@@ -156,7 +156,40 @@ Healthy Food:
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            
+            <div class="pro">
+                <img src="{{ asset('images/khejur1.jpg') }}" alt="" />
+                <div class="des">
+                    <span>Healthy Foods</span>
+                    <h5>Khejur-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1950</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="{{ asset('images/mango1.jpeg') }}" alt="" />
+                <div class="des">
+                    <span>Rajshahi</span>
+                    <h5>Mango-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 3150</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
         </div>
     </section>
 
