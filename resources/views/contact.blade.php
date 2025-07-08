@@ -64,6 +64,41 @@
         </div>
     </section>
 
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency Locations or Contact us Today!</h2>
+            <h3>Haed Office</h3>
+            <div>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p> House #112, Road No. 8, Mirpur 10, Dhaka 1216 </p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>bdhaat@gmail.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+8801860035539</p>
+                </li>
+                <li>
+                    <i class="fal fa-clock"></i>
+                    <p> Saturday to Thursday: 9:00 AM to 5:00 PM</p>
+                </li>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58403.6595854141!2d90.32093750505184!3d23.810464378930238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1c61277db%3A0xc7d18838730e2e59!2sMirpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1697707410437!5m2!1sen!2sbd"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
 
 </body>
+
 </html>
