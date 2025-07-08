@@ -46,7 +46,7 @@
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
         </ul>
-    </section>kkk
+    </section>
 
     <section id="product1" class="section-p1">
         <h2>Traditional Foods</h2>
@@ -191,7 +191,63 @@
         </div>
     </section>
 
+    <!-- Footer -->
 
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="" />
+            <h4>Contact</h4>
+            <p>
+                <strong>Address: </strong>House 273, Road 13, Block C, Mirpur 6, Dhaka
+                1216
+            </p>
+            <p><strong>Phone</strong> +8801787087017 / +8801737611605</p>
+            <p><strong>Hours</strong> 8:00 AM - 11:59 PM, Sat - Thu</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="" />
+                <img src="img/pay/play.jpg" alt="" />
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" height="80" width="350" alt="" />
+        </div>
+
+        <div class="copyright">
+            <p>&copy; BDHaat. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
