@@ -121,3 +121,14 @@
 .submit-btn:hover {
     background-color: #013aa5;
 }
+
+/* ✅ Status Message */
+#form-status {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    color: green;
+    display: none;
+}
+
+
