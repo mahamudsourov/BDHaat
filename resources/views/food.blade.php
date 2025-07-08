@@ -33,7 +33,24 @@ Food Page:
             <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
 
-        
+        <!-- Right: Navigation -->
+        <ul id="navbar">
+            <li><a href="{{ route('home') }}">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">Traditional Products</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ route('clothes') }}">Clothes</a></li>
+                    <li><a href="{{ route('food') }}">Foods</a></li>
+                </ul>
+            </li>
+
+            <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+        </ul>
+    </section>
+
+    
 </body>
 
 </html>
