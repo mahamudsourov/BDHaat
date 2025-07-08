@@ -33,18 +33,18 @@
 
         <!-- Right: Navigation -->
         <ul id="navbar">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
 
             <li class="dropdown">
                 <a href="#">Traditional Products</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Clothes</a></li>
-                    <li><a href="#">Foods</a></li>
+                    <li><a href="{{ route('clothes') }}">Clothes</a></li>
+                    <li><a href="{{ route('food') }}">Foods</a></li>
                 </ul>
             </li>
 
-            <li><a href="#">Healthy Foods</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
             <li><a href="#" id="openLoginBtn">Login</a></li>
             <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
         </ul>
