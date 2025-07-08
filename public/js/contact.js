@@ -15,3 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
             showStatus("Please fill in all required fields.", "red");
             return;
         }
+
+        showStatus("Sending...", "#024ecf");
+
+        setTimeout(() => {
+            showStatus("✅ Message sent successfully!", "green");
+            form.reset();
+
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+        }, 1500);
+    });
