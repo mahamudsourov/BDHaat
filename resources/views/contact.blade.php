@@ -97,7 +97,20 @@
         </div>
     </section>
 
+    <section id="form-details">
+        <form id="contactForm" class="contact-form">
+            <span class="form-subtitle">Message Us</span>
+            <h2 class="form-title">We Love to Hear from You!</h2>
 
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+            <div id="form-status"></div>
+        </form>
+    </section>
 
 </body>
 
