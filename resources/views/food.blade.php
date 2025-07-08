@@ -14,6 +14,14 @@ Food Page:
 
 <body>
 
+    <section id="header">
+        <!-- Left: Logo + Name -->
+        <div id="logo-area">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('images/logo.png') }}" height="40" width="40" alt="Logo" />
+            </a>
+            <span class="brand-name">BDHaat</span>
+        </div>
 </body>
 
 </html>
