@@ -88,10 +88,10 @@
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/chomchom.jpg') }}" alt="" />
+                <img src="{{ asset('images/sari2.webp') }}" alt="" />
                 <div class="des">
                     <span>Tangail</span>
-                    <h5>Chomchom</h5>
+                    <h5>Sari-2</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -105,10 +105,10 @@
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
+                <img src="{{ asset('images/tripori_clothes.jpg') }}" alt="" />
                 <div class="des">
-                    <span>Dhaka</span>
-                    <h5>Punjabi-2</h5>
+                    <span>Bandarban</span>
+                    <h5>Tripori</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -122,10 +122,10 @@
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/honey1.avif') }}" alt="" />
+                <img src="{{ asset('images/sari5.jpeg') }}" alt="" />
                 <div class="des">
-                    <span>Healthy Food</span>
-                    <h5>Honey</h5>
+                    <span>Dhaka</span>
+                    <h5>Sari-3</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -139,10 +139,10 @@
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/sweets1.jpg') }}" alt="" />
+                <img src="{{ asset('images/couple.jpg') }}" alt="" />
                 <div class="des">
-                    <span>Cumilla</span>
-                    <h5>Sweets1</h5>
+                    <span>Rangamati</span>
+                    <h5>Couple</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -150,16 +150,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 1280</h4>
+                    <h4>BDT 3080</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/khejur1.jpg') }}" alt="" />
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
                 <div class="des">
-                    <span>Healthy Foods</span>
-                    <h5>Khejur-1</h5>
+                    <span>Dhaka</span>
+                    <h5>Panjabi-2-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -167,16 +167,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 1950</h4>
+                    <h4>BDT 1050</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
             <div class="pro">
-                <img src="{{ asset('images/mango1.jpeg') }}" alt="" />
+                <img src="{{ asset('images/Tribal.jpg') }}" alt="" />
                 <div class="des">
-                    <span>Rajshahi</span>
-                    <h5>Mango-1</h5>
+                    <span>Rangamati</span>
+                    <h5>Tribal-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -184,7 +184,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 3150</h4>
+                    <h4>BDT 1500</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
