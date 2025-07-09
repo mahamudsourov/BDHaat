@@ -1,5 +1,3 @@
-Healthy Food:
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,6 +120,7 @@ Healthy Food:
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
+
             <div class="pro">
                 <img src="{{ asset('images/honey1.avif') }}" alt="" />
                 <div class="des">
@@ -189,7 +188,6 @@ Healthy Food:
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
-
         </div>
     </section>
 
@@ -250,6 +248,5 @@ Healthy Food:
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
