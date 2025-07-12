@@ -1,11 +1,10 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const status = document.getElementById("form-status");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-        
+
         const name = form.elements["name"].value.trim();
         const email = form.elements["email"].value.trim();
         const subject = form.elements["subject"].value.trim();
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
             showStatus("Please fill in all required fields.", "red");
             return;
         }
-
         showStatus("Sending...", "#024ecf");
 
         setTimeout(() => {
@@ -27,3 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 5000);
         }, 1500);
     });
+    
+    function showStatus(message, color) {
+        status.textContent = message;
+        status.style.color = color;
+        status.style.display = "block";
+    }
+});
