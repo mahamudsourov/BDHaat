@@ -30,6 +30,24 @@ Route::get('/food', function () {
     return view('food');
 })->name('food');
 
+Route::get('/helpcenter', function () {
+    return view('helpcenter');
+})->name('helpcenter');
+
+Route::get('/order', function () {
+    return view('order');
+})->name('order');
+
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
+
+Route::get('/returnrefund', function () {
+    return view('returnrefund');
+})->name('returnrefund');
+
+
+
 Route::get('/healthy_food', function () {
     return view('healthy_food');
 })->name('healthy_food');
