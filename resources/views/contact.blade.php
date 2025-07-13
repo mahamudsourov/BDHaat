@@ -43,6 +43,15 @@
                     <li><a href="{{ route('food') }}">Foods</a></li>
                 </ul>
             </li>
+             <li class="dropdown">
+                <a href="#">Help & Support</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
+                    <li><a href="{{ route('order') }}">Order</a></li>
+                    <li><a href="{{ route('payment') }}">Payment</a></li>
+                    <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
+                </ul>
+            </li>
 
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>

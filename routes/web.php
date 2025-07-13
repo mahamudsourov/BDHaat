@@ -55,3 +55,7 @@ Route::get('/healthy_food', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/help-center', function () {
+    return view('helpcenter');
+})->name('helpcenter');
