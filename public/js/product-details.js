@@ -11,3 +11,31 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "/clothes"; // Laravel রাউট অনুযায়ী adjust করো
     }
 });
+
+function addToCart() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    if (quantity < 1) {
+        alert('Quantity cannot be less than 1');
+        return;
+    }
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (!product) {
+        alert('No product selected');
+        return;
+    }
+
+    let existingIndex = cart.findIndex(item => item.title === product.title);
+    if (existingIndex > -1) {
+        cart[existingIndex].quantity += quantity;
+    } else {
+        cart.push({
+            ...product,
+            quantity
+        });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Added to cart!');
+}
