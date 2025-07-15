@@ -39,3 +39,20 @@ function addToCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert('Added to cart!');
 }
+
+function buyNow() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (!product) {
+        alert('No product selected');
+        return;
+    }
+
+    localStorage.setItem('buynow', JSON.stringify({
+        ...product,
+        quantity
+    }));
+
+    window.location.href = "/checkout";
+}
