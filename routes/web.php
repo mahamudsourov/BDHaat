@@ -46,8 +46,6 @@ Route::get('/returnrefund', function () {
     return view('returnrefund');
 })->name('returnrefund');
 
-
-
 Route::get('/healthy_food', function () {
     return view('healthy_food');
 })->name('healthy_food');
@@ -59,3 +57,19 @@ Route::get('/contact', function () {
 Route::get('/help-center', function () {
     return view('helpcenter');
 })->name('helpcenter');
+
+Route::get('/clothes', function () {
+    return view('clothes');
+})->name('clothes');
+
+Route::get('/product-details', function () {
+    return view('product-details');
+})->name('product.details');
+
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
