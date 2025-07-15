@@ -11,3 +11,26 @@ function loadCart() {
     }
 
     let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        totalPrice += itemTotal;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><img src="${IMAGE_PATH}/${item.image}" alt="${item.title}" class="product-img"></td>
+            <td>${item.brand}</td>
+            <td>${item.title}</td>
+            <td>BDT ${item.price}</td>
+            <td>
+                <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index}, this.value)" />
+            </td>
+            <td>BDT ${itemTotal}</td>
+            <td><button class="remove-btn" onclick="removeItem(${index})">Remove</button></td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    document.getElementById('total-price').innerText = 'Total: BDT ' + totalPrice;
+    document.getElementById('checkout-btn').style.display = 'inline-block';
+}
