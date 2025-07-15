@@ -8,6 +8,9 @@
 </head>
 <body>
 
+
+
+    <div></div>
 <div class="checkout-container">
     <h2>Checkout</h2>
 
