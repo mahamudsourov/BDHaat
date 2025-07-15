@@ -17,3 +17,33 @@
 .single-pro-details {
     flex-grow: 1;
 }
+
+.single-pro-details h4,
+h2 {
+    margin: 8px 0;
+}
+
+.normal {
+    background-color: #e91e63;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 12px;
+    margin-top: 10px;
+}
+
+.normal:hover {
+    background-color: #d81b60;
+}
+
+input[type=number] {
+    width: 60px;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
