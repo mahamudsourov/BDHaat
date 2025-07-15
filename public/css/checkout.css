@@ -12,3 +12,28 @@ label {
     display: block;
     margin: 15px 0 5px 0;
 }
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button.submit-btn {
+    margin-top: 20px;
+    background: #e91e63;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.submit-btn:hover {
+    background: #d81b60;
+}
