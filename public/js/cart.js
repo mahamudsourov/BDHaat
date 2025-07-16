@@ -36,3 +36,24 @@ function loadCart() {
 }
 
 
+function updateQuantity(index, newQuantity) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    newQuantity = parseInt(newQuantity);
+    if (newQuantity < 1) {
+        alert('Quantity cannot be less than 1');
+        loadCart();
+        return;
+    }
+    cart[index].quantity = newQuantity;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+window.onload = loadCart;
