@@ -34,3 +34,5 @@ function loadCart() {
     document.getElementById('total-price').innerText = 'Total: BDT ' + totalPrice;
     document.getElementById('checkout-btn').style.display = 'inline-block';
 }
+
+

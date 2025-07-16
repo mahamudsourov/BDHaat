@@ -34,3 +34,37 @@ input[type=number] {
     border: 1px solid #ccc;
     font-size: 14px;
 }
+
+button.remove-btn {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.remove-btn:hover {
+    background-color: #d81b60;
+}
+
+.total-price {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #e91e63;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background-color: #d81b60;
+}
