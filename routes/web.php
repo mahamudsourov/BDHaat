@@ -58,6 +58,10 @@ Route::get('/help-center', function () {
     return view('helpcenter');
 })->name('helpcenter');
 
+Route::get('/customercare', function () {
+    return view('customercare');
+})->name('customercare');
+
 Route::get('/clothes', function () {
     return view('clothes');
 })->name('clothes');

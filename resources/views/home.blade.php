@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <title>BDHaat</title>
 
 </head>
@@ -50,6 +51,7 @@
                 <a href="#">Help & Support</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
+                    <li><a href="{{ route('customercare') }}">Contact Customer care</a></li>
                     <li><a href="{{ route('order') }}">Order</a></li>
                     <li><a href="{{ route('payment') }}">Payment</a></li>
                     <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
@@ -60,6 +62,7 @@
             <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
         </ul>
     </section>
+{{-- Hero Section --}}
 
     <section id="hero">
         <h1>Easy way to Shop</h1>
@@ -434,10 +437,5 @@
         </form>
     </div>
 </div>
-
-
 <script src="{{ asset('js/login.js') }}"></script>
-
-
-
 </html>

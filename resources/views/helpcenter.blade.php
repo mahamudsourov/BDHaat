@@ -27,7 +27,7 @@
             <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
 
-        <!-- Right: Navigation -->
+       <!-- Right: Navigation -->
         <ul id="navbar">
             <li><a href="{{ route('home') }}">Home</a></li>
 
@@ -46,6 +46,7 @@
                 <a href="#">Help & Support</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
+                    <li><a href="{{ route('customercare') }}">Contact Customer care</a></li>
                     <li><a href="{{ route('order') }}">Order</a></li>
                     <li><a href="{{ route('payment') }}">Payment</a></li>
                     <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
