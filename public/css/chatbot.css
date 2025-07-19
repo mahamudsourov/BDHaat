@@ -94,9 +94,6 @@ body {
   object-position: center;
 }
 
-
-
-
 @keyframes slide {
   0%   { transform: translateX(0%); }
   33%  { transform: translateX(-100%); }
@@ -208,4 +205,10 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(5px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/*quick button replies */
+.user-response, .bot-response {
+  display: flex;
+  flex-direction: column;
 }
