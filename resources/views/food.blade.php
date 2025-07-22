@@ -63,10 +63,10 @@
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="{{ asset('images/punjabi1.jpg') }}" alt="" />
+                <img src="{{ asset('images/honeyNuts1.jpg') }}" alt="" />
                 <div class="des">
                     <span>BDHaat-Authentic</span>
-                    <h5>Punjabi-1</h5>
+                    <h5>HoneyNuts-1</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -74,7 +74,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 890</h4>
+                    <h4>BDT 1890</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
