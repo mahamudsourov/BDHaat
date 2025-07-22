@@ -1,0 +1,263 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4ff;
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+}
+
+.faq-item {
+  max-width: 600px;       
+  margin: 0 auto 40px;    
+  padding: 0 10px;       
+}
+
+.order-section h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004a99;
+    font-size: 18px; 
+    font-weight: 600;
+}
+
+.faq-item details {
+    background: #e6f0ff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.faq-item summary {
+    font-weight: 600;
+    font-size: 14px; 
+    outline: none;
+}
+
+.faq-item p {
+    margin-top: 8px;
+    font-size: 13px; 
+    line-height: 1.4;
+    color: #333;
+}
+
+
+.order-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #004085;
+    margin-bottom: 25px;
+    font-size: 24px; 
+}
+
+.order-section {
+    margin-bottom: 30px;
+}
+
+.order-section h2 {
+    color: #0056b3;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    font-size: 18px; 
+    margin-bottom: 20px;
+}
+
+.order-card {
+    background-color: #dde2ed;
+    border-radius: 10px; 
+    display: flex;
+    padding: 12px; 
+    margin-bottom: 12px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-wrap: wrap;
+}
+
+.order-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.order-card img {
+    width: 110px; 
+    height: 110px; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px; 
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h3 {
+    margin: 0 0 8px 0;
+    color: #003366;
+}
+
+/* Pre-Order Card */
+.order-card.pre-order {
+    background-color: #d0e7ff; 
+    border: 2px dashed #4a90e2;
+}
+
+/* Pre-Order status */
+.status.preordered {
+    color: #2a64c7;
+    font-weight: 600;
+}
+
+/* Pre-Order buttons */
+.cancel-preorder-btn,
+.info-preorder-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 8px;
+}
+
+.cancel-preorder-btn:hover {
+    background-color: #c82333;
+}
+
+.info-preorder-btn:hover {
+    background-color: #0056b3;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.delivered {
+    color: green;
+}
+
+.status.cancelled {
+    color: red;
+}
+
+.status.purchased {
+    color: orange;
+}
+
+.order-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.order-actions button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.track-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.track-btn:hover {
+    background-color: #0056b3;
+}
+
+.reorder-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reorder-btn:hover {
+    background-color: #1e7e34;
+}
+.delivery-timeline {
+    background: #eef6ff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-steps .step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.timeline-steps .step.completed {
+    color: #007bff;
+}
+
+.timeline-steps .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 3px;
+    background: #bbb;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.timeline-steps .step.completed::after {
+    background: #007bff;
+}
+
+.timeline-steps .step:last-child::after {
+    content: none;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .order-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .order-card img {
+        width: 100px;  
+        height: 100px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .order-info {
+        width: 100%;
+    }
+
+    .order-section h2 {
+        font-size: 16px; 
+        padding-left: 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
