@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <title>BDHaat</title>
 
 </head>
@@ -52,6 +53,7 @@
             <li class="dropdown">
                 <a href="#">Help & Support</a>
                 <ul class="dropdown-menu">
+                    
                     <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
                     <li><a href="{{ route('customercare') }}">Contact Customer Care</a></li>
                     <li><a href="{{ route('order') }}">Order</a></li>
@@ -66,6 +68,7 @@
             <li>
                 <button id="darkModeToggle" class="dark-toggle">🌙</button>
             </li>
+
 
         </ul>
     </section>
@@ -388,6 +391,7 @@
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
+    
 </body>
 
 <!-- Login Modal -->
@@ -445,5 +449,8 @@
     </div>
 </div>
 <script src="{{ asset('js/login.js') }}"></script>
+
+<script src="{{ asset('js/darkmode.js') }}"></script>
+
 
 </html>

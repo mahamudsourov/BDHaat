@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/helpcenter.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 </head>
 <body>
     <section id="header">
@@ -31,6 +32,8 @@
         <ul id="navbar">
             <li><a href="{{ route('home') }}">Home</a></li>
 
+            
+
             <li class="dropdown">
                 <a href="#">Traditional Products</a>
                 <ul class="dropdown-menu">
@@ -55,6 +58,8 @@
 
             <li><a href="#" id="openLoginBtn">Login</a></li>
             <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
+
+            <button id="darkModeToggle" class="dark-toggle">🌙</button>
         </ul>
     </section>
     <div class="container">
@@ -140,5 +145,6 @@
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 </html>

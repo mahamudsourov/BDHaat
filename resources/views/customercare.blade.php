@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 </head>
 
 <body>
@@ -36,6 +37,8 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('clothes') }}">Clothes</a></li>
                     <li><a href="{{ route('food') }}">Foods</a></li>
+
+                    
                 </ul>
             </li>
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
@@ -110,6 +113,7 @@
     </div>
 
     <script src="{{ asset('js/chatbot.js') }}"></script>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 
 </html>

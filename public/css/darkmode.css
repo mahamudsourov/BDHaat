@@ -1,0 +1,185 @@
+
+body {
+    transition: background 0.4s, color 0.4s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+
+body.dark-mode .card,
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode .contact-form,
+body.dark-mode .section,
+body.dark-mode section,
+body.dark-mode .modal-content,
+body.dark-mode .login-modal-content,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode #hero {
+    background-color: #1c1c1c;
+    color: #f0f0f0; 
+}
+
+body.dark-mode #hero h1,
+body.dark-mode #hero p {
+    color: #11097e !important; /* Force text to be visible */
+}
+
+
+
+body.dark-mode .why-shop {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .why-shop .feature-box {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .why-shop .icon {
+    color: #00ffff;
+}
+
+
+body.dark-mode .pro {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .pro .des h5,
+body.dark-mode .pro .des span,
+body.dark-mode .pro .des h4 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .pro .star i {
+    color: gold;
+}
+
+
+body.dark-mode #header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .brand-name {
+    color: #f0f0f0;
+}
+
+body.dark-mode #navbar a {
+    color: #070b73;
+}
+
+body.dark-mode #navbar a:hover {
+    color: #060d9a;
+}
+
+
+body.dark-mode .search-box input {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #051877;
+}
+
+body.dark-mode .search-box button {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode footer a {
+    color: #ddd;
+}
+
+body.dark-mode footer a:hover {
+    color: #03156d;
+}
+
+body.dark-mode .copyright {
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+
+body.dark-mode .login-modal-content {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .login-modal-content input {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .login-modal-content button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .login-modal-content a {
+    color: #00ffff;
+}
+
+/* Dark mode toggle */
+.dark-toggle {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dark-toggle:hover {
+    color: #010713;
+}
+
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode a {
+    color: #e6e6ea !important;
+}
+
+
+body.dark-mode .dropdown-menu {
+    background-color: #2a2a2a;
+    color: #09117e;
+    border: 1px solid #444;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #e9e9ed !important;
+    display: block;
+    padding: 10px;
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background-color: #0d0d68;
+    color: #00ffff;
+}
+

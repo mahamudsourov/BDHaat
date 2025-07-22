@@ -5,6 +5,7 @@
     <title>Checkout - BDHaat</title>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 </head>
 <body>
 
@@ -32,5 +33,6 @@
 </div>
 
 <script src="{{ asset('js/checkout.js') }}"></script>
+<script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 </html>

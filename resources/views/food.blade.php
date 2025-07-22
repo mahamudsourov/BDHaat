@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <title>BDHaat</title>
 </head>
 
@@ -30,6 +31,8 @@
             </div>
             <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
+
+        
 
         <!-- Right: Navigation -->
         <ul id="navbar">
@@ -55,6 +58,11 @@
 
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
+
+            <li>
+                <button id="darkModeToggle" class="dark-toggle">🌙</button>
+            </li>
+
         </ul>
     </section>
 
@@ -266,6 +274,7 @@
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 
 </html>

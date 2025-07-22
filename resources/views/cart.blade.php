@@ -6,6 +6,7 @@
     <title>Cart - BDHaat</title>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <script>
         const IMAGE_PATH = "{{ asset('images') }}";
     </script>
@@ -42,6 +43,7 @@
     </div>
 
     <script src="{{ asset('js/cart.js') }}"></script>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 
 </body>
 

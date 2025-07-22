@@ -57,3 +57,5 @@ function removeItem(index) {
 }
 
 window.onload = loadCart;
+
+

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <title>BDHaat</title>
 </head>
 
@@ -28,6 +29,9 @@
                 <input type="text" placeholder="Search products..." id="search-bar" />
                 <button id="search-button"><i class="fas fa-search"></i></button>
             </div>
+
+
+           
 
             <!-- Cart icon with count -->
             <a href="{{ route('cart') }}" id="cart-icon" style="position: relative; font-size: 24px; color: #333;">
@@ -69,6 +73,10 @@
 
                 <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
+                
+            <li>
+                <button id="darkModeToggle" class="dark-toggle">🌙</button>
+            </li>
             </ul>
     </section>
 
@@ -76,6 +84,8 @@
         <h2>Traditional Clothes</h2>
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
+
+            
 
             <!-- Cards with onclick to product details -->
             <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
@@ -259,6 +269,7 @@
     </footer>
 
     <script src="{{ asset('js/clothes.js') }}"></script>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 
 </html>

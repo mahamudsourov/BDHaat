@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/order.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 </head>
 
 <body>
@@ -184,6 +185,7 @@
     </div>
 
     <script src="{{ asset('js/order.js') }}"></script>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 </body>
 
 </html>
