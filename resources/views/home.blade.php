@@ -36,6 +36,8 @@
         <ul id="navbar">
             <li><a href="{{ route('home') }}">Home</a></li>
 
+
+
             <li class="dropdown">
                 <a href="#">Traditional Products</a>
                 <ul class="dropdown-menu">
@@ -47,7 +49,7 @@
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
 
-               <li class="dropdown">
+            <li class="dropdown">
                 <a href="#">Help & Support</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
@@ -60,9 +62,14 @@
 
             <li><a href="#" id="openLoginBtn">Login</a></li>
             <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
+
+            <li>
+                <button id="darkModeToggle" class="dark-toggle">🌙</button>
+            </li>
+
         </ul>
     </section>
-{{-- Hero Section --}}
+    {{-- Hero Section --}}
 
     <section id="hero">
         <h1>Easy way to Shop</h1>
@@ -438,4 +445,5 @@
     </div>
 </div>
 <script src="{{ asset('js/login.js') }}"></script>
+
 </html>
