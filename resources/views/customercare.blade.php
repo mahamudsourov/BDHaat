@@ -68,7 +68,7 @@
                         <img src="{{ asset('images/khejur1.jpg') }}" alt="Slide 3">
                     </div>
                 </div>
-            <!-- Bot welcome message -->
+                <!-- Bot welcome message -->
                 <div class="bot-welcome">
                     <img src="{{ asset('images/chatbot.png') }}" class="bot-avatar" alt="avatar">
                     <div class="bot-msg">Dear Sir! Hope you are having a great day!<br>Ask me anything, I'm here to
