@@ -426,6 +426,38 @@ body {
 
 
 
+/* Dark Mode */
+
+
+    body {
+        transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark-mode {
+        background-color: #121212;
+        color: #f0f0f0;
+    }
+
+    body.dark-mode .card,
+    body.dark-mode header,
+    body.dark-mode nav,
+    body.dark-mode .contact-form,
+    body.dark-mode .section {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+    }
+
+    .dark-toggle {
+        background: transparent;
+        border: none;
+        color: inherit;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .dark-toggle:hover {
+        color: #00ffff;
+    }
 
 
 /* Footer */
