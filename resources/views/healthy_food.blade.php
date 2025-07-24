@@ -256,8 +256,15 @@
                 <img src="img/pay/app.jpg" alt="" />
                 <img src="img/pay/play.jpg" alt="" />
             </div>
-            <p>Secured Payment Gateways</p>
-            <img src="img/pay/pay.png" height="80" width="350" alt="" />
+            <div class="secured-payment">
+                <p class="payment-title">Secured Payment Gateways</p>
+                <div class="payment-icons">
+                    <img src="{{ asset('images/bkash.png') }}" alt="Bkash">
+                    <img src="{{ asset('images/nagad.png') }}" alt="Nagad">
+                    <img src="{{ asset('images/visa.png') }}" alt="Visa">
+                    <img src="{{ asset('images/american-express.png') }}" alt="American Express">
+                </div>
+            </div>
         </div>
 
         <div class="copyright">

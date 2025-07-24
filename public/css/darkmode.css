@@ -1,158 +1,15 @@
-
+/* ===== Base Transition ===== */
 body {
     transition: background 0.4s, color 0.4s;
 }
 
+/* ===== Dark Mode Base ===== */
 body.dark-mode {
     background-color: #121212;
     color: #f0f0f0;
 }
 
-
-body.dark-mode .card,
-body.dark-mode header,
-body.dark-mode nav,
-body.dark-mode .contact-form,
-body.dark-mode .section,
-body.dark-mode section,
-body.dark-mode .modal-content,
-body.dark-mode .login-modal-content,
-body.dark-mode input,
-body.dark-mode textarea,
-body.dark-mode select {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-body.dark-mode #hero {
-    background-color: #1c1c1c;
-    color: #f0f0f0; 
-}
-
-body.dark-mode #hero h1,
-body.dark-mode #hero p {
-    color: #11097e !important; /* Force text to be visible */
-}
-
-
-
-body.dark-mode .why-shop {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-body.dark-mode .why-shop .feature-box {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: 1px solid #444;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .why-shop .icon {
-    color: #00ffff;
-}
-
-
-body.dark-mode .pro {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: 1px solid #444;
-}
-
-body.dark-mode .pro .des h5,
-body.dark-mode .pro .des span,
-body.dark-mode .pro .des h4 {
-    color: #f0f0f0;
-}
-
-body.dark-mode .pro .star i {
-    color: gold;
-}
-
-
-body.dark-mode #header {
-    background-color: #1e1e1e;
-    border-bottom: 1px solid #444;
-}
-
-body.dark-mode .brand-name {
-    color: #f0f0f0;
-}
-
-body.dark-mode #navbar a {
-    color: #070b73;
-}
-
-body.dark-mode #navbar a:hover {
-    color: #060d9a;
-}
-
-
-body.dark-mode .search-box input {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: 1px solid #051877;
-}
-
-body.dark-mode .search-box button {
-    background-color: #444;
-    color: #fff;
-}
-
-/* Footer */
-body.dark-mode footer {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-}
-
-body.dark-mode footer a {
-    color: #ddd;
-}
-
-body.dark-mode footer a:hover {
-    color: #03156d;
-}
-
-body.dark-mode .copyright {
-    border-top: 1px solid #333;
-    color: #aaa;
-}
-
-body.dark-mode .login-modal-content {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: 1px solid #444;
-}
-
-body.dark-mode .login-modal-content input {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-    border: 1px solid #555;
-}
-
-body.dark-mode .login-modal-content button {
-    background-color: #444;
-    color: #fff;
-}
-
-body.dark-mode .login-modal-content a {
-    color: #00ffff;
-}
-
-/* Dark mode toggle */
-.dark-toggle {
-    background: transparent;
-    border: none;
-    color: inherit;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.dark-toggle:hover {
-    color: #010713;
-}
-
-
+/* ===== Headings and Texts ===== */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -165,21 +22,650 @@ body.dark-mode a {
     color: #e6e6ea !important;
 }
 
-
-body.dark-mode .dropdown-menu {
-    background-color: #2a2a2a;
-    color: #09117e;
-    border: 1px solid #444;
+/* ===== Section Backgrounds ===== */
+body.dark-mode section,
+body.dark-mode .section,
+body.dark-mode .contact-form,
+body.dark-mode #contact-details,
+body.dark-mode #form-details,
+body.dark-mode .about-section,
+body.dark-mode .contact-wrapper,
+body.dark-mode .main {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
 }
 
+/* ===== Header & Navbar ===== */
+body.dark-mode #header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #444;
+}
+body.dark-mode .brand-name {
+    color: #f0f0f0;
+}
+body.dark-mode #navbar a {
+    color: #070b73;
+}
+body.dark-mode #navbar a:hover {
+    color: #060d9a;
+}
+
+/* ===== Dropdown Menu ===== */
+body.dark-mode .dropdown-menu {
+    background-color: #2a2a2a;
+    color: #e9e9ed;
+    border: 1px solid #444;
+}
 body.dark-mode .dropdown-menu a {
     color: #e9e9ed !important;
     display: block;
     padding: 10px;
 }
-
 body.dark-mode .dropdown-menu a:hover {
     background-color: #0d0d68;
     color: #00ffff;
 }
+
+/* ===== Input, Textarea, Form Elements ===== */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #444 !important;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #ccc !important;
+}
+
+/* ===== Buttons ===== */
+body.dark-mode .contact-form button,
+body.dark-mode .submit-btn,
+body.dark-mode .login-modal-content button {
+    background-color: #444 !important;
+    color: #fff !important;
+    border: 1px solid #666;
+}
+
+/* ===== Hero Section ===== */
+body.dark-mode #hero {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+}
+body.dark-mode #hero h1,
+body.dark-mode #hero p {
+    color: #11097e !important;
+}
+
+/* ===== Cards, Modals, Features ===== */
+body.dark-mode .why-shop,
+body.dark-mode .card,
+body.dark-mode .modal-content,
+body.dark-mode .login-modal-content,
+body.dark-mode .pro {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+body.dark-mode .why-shop .icon {
+    color: #00ffff;
+}
+body.dark-mode .why-shop .feature-box,
+body.dark-mode .pro .des {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .pro .des h5,
+body.dark-mode .pro .des span,
+body.dark-mode .pro .des h4 {
+    color: #f0f0f0;
+}
+body.dark-mode .pro .star i {
+    color: gold;
+}
+
+/* ===== Footer ===== */
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+body.dark-mode footer a {
+    color: #ddd;
+}
+body.dark-mode footer a:hover {
+    color: #03156d;
+}
+body.dark-mode .copyright {
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+
+/* ===== Login Modal ===== */
+body.dark-mode .login-modal-content input {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+body.dark-mode .login-modal-content a {
+    color: #00ffff;
+}
+
+/* ===== Map Section ===== */
+body.dark-mode .map {
+    background-color: #1e1e1e;
+    padding: 10px;
+}
+
+/* ===== Dark Mode Toggle Button ===== */
+.dark-toggle {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+.dark-toggle:hover {
+    color: #010713;
+}
+
+/* ===== Page Header Specific ===== */
+body.dark-mode #page-header3 {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* ===== About Section ===== */
+body.dark-mode .about-container {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05) !important;
+}
+body.dark-mode .about-title {
+    color: #ffffff !important;
+}
+body.dark-mode .about-text {
+    color: #cccccc !important;
+}
+
+
+/* ===== Container Section ===== */
+body.dark-mode .container {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===== Contact Section ===== */
+body.dark-mode .contact {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+    padding: 15px 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+body.dark-mode .contact p {
+    color: #e6e6ea !important;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+body.dark-mode .contact strong {
+    color: #ffffff !important;
+}
+
+
+
+/* ===== Chatbot Page Container ===== */
+body.dark-mode .chatbot-page {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Chatbot Header ===== */
+body.dark-mode .chatbot-header {
+    background-color: #2a2a2a;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #e6e6ea;
+    border-bottom: 1px solid #444;
+}
+
+/* ===== Chatbot Body ===== */
+body.dark-mode .chatbot-body {
+    background-color: #1c1c1c;
+    padding: 15px 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* ===== Info Card ===== */
+body.dark-mode .info-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* ===== Carousel Track & Images ===== */
+body.dark-mode .carousel-track img {
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+
+/* ===== Bot Welcome Message ===== */
+body.dark-mode .bot-welcome {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #e6e6ea;
+}
+body.dark-mode .bot-avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid #444;
+}
+
+/* ===== Bot Message ===== */
+body.dark-mode .bot-msg {
+    background-color: #1e1e1e;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    color: #cfdcff;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* ===== Dropdowns ===== */
+body.dark-mode .dropdowns details {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: #e6e6ea;
+}
+body.dark-mode .dropdowns summary {
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+body.dark-mode .dropdowns p {
+    margin-top: 8px;
+    color: #ccc;
+}
+
+/* ===== Chat Options Buttons ===== */
+body.dark-mode .chat-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+body.dark-mode .chat-btn {
+    background-color: #444;
+    border: 1px solid #666;
+    color: #f0f0f0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    user-select: none;
+}
+body.dark-mode .chat-btn:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+
+
+/* ===== Order Container ===== */
+body.dark-mode .order-container {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Section Headers ===== */
+body.dark-mode .order-section h2,
+body.dark-mode .order-container h1 {
+    color: #e6e6ea;
+    margin-bottom: 15px;
+}
+
+/* ===== FAQ Items ===== */
+body.dark-mode .faq-item details {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    color: #e6e6ea;
+}
+
+body.dark-mode .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+
+body.dark-mode .faq-item p {
+    margin-top: 8px;
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ===== Order Cards ===== */
+body.dark-mode .order-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+body.dark-mode .order-card.cancelled {
+    border-color: #a33a3a;
+    background-color: #3a1e1e;
+}
+
+body.dark-mode .order-card.pre-order {
+    border-color: #3a6a3a;
+    background-color: #1e3a1e;
+}
+
+/* ===== Product Images ===== */
+body.dark-mode .order-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.15);
+}
+
+/* ===== Order Info Section ===== */
+body.dark-mode .order-info h3 {
+    color: #f0f0f0;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+body.dark-mode .order-info p {
+    margin: 5px 0;
+    color: #ccc;
+    font-size: 14.5px;
+}
+
+body.dark-mode .order-info .status {
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #fff;
+}
+
+body.dark-mode .status.delivered {
+    background-color: #3a6a3a;
+}
+
+body.dark-mode .status.cancelled {
+    background-color: #a33a3a;
+}
+
+body.dark-mode .status.purchased {
+    background-color: #336699;
+}
+
+body.dark-mode .status.preordered {
+    background-color: #aa8800;
+}
+
+/* ===== Order Actions Buttons ===== */
+body.dark-mode .order-actions button {
+    background-color: #444;
+    border: 1px solid #666;
+    color: #f0f0f0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .order-actions button:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+/* ===== Delivery Timeline ===== */
+body.dark-mode .delivery-timeline {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+body.dark-mode .timeline-steps {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+}
+
+body.dark-mode .timeline-steps .step {
+    flex: 1;
+    text-align: center;
+    padding: 5px 7px;
+    border-radius: 6px;
+    background-color: #444;
+    color: #888;
+}
+
+body.dark-mode .timeline-steps .step.completed {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: 700;
+}
+
+/* ===== Page Header #page-header3 ===== */
+body.dark-mode #page-header3 {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode #page-header3 h2 {
+    color: #e6e6ea;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+body.dark-mode #page-header3 p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* ===== About Section ===== */
+body.dark-mode .about-section {
+    background-color: #1e1e1e !important;
+    padding: 30px 20px;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+body.dark-mode .about-title {
+    color: #ffffff !important;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .about-text {
+    color: #cccccc !important;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== Contact Details Section ===== */
+body.dark-mode #contact-details {
+    background-color: #1e1e1e !important;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 12px;
+    border: 1px solid #444;
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode #contact-details .details {
+    flex: 1 1 320px;
+}
+
+body.dark-mode #contact-details .details span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #00ffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+body.dark-mode #contact-details .details h2,
+body.dark-mode #contact-details .details h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #e6e6ea;
+}
+
+body.dark-mode #contact-details .details li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+body.dark-mode #contact-details .details li i {
+    margin-right: 10px;
+    color: #00ffff;
+    font-size: 18px;
+}
+
+/* ===== Map ===== */
+body.dark-mode #contact-details .map {
+    flex: 1 1 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #444;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+/* ===== Contact Form ===== */
+body.dark-mode #form-details {
+    max-width: 600px;
+    margin: 30px auto 60px;
+    padding: 20px;
+    background-color: #1e1e1e !important;
+    border-radius: 12px;
+    border: 1px solid #444;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .contact-form .form-subtitle {
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .contact-form .form-title {
+    color: #e6e6ea;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    width: 100%;
+    background-color: #2a2a2a !important;
+    border: 1px solid #444 !important;
+    color: #f0f0f0 !important;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: vertical;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #bbb !important;
+}
+
+body.dark-mode .contact-form .submit-btn {
+    background-color: #444 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #666;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .contact-form .submit-btn:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+/* ===== Form Status Message ===== */
+body.dark-mode #form-status {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 14px;
+}
+  
+
+
 

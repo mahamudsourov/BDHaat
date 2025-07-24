@@ -15,4 +15,5 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
 });
 
+
 toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';

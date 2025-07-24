@@ -53,6 +53,10 @@
                     <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
                 </ul>
             </li>
+
+            <li>
+                <button id="darkModeToggle" class="dark-toggle">🌙</button>
+            </li>
         </ul>
     </section>
 
