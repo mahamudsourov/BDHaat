@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AdminController;
+
+
 // Home Page
 Route::get('/', function () {
     return view('home');
@@ -81,4 +84,9 @@ Route::get('/checkout', function () {
 Route::get('/order', function () {
     return view('order');
 })->name('order');
+
+
+
+
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
