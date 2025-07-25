@@ -68,7 +68,7 @@
                 </li>
 
                 <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                
 
                 
             <li>
