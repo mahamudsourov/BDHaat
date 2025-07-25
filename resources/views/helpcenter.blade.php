@@ -57,8 +57,7 @@
                 </ul>
             </li>
 
-            <li><a href="#" id="openLoginBtn">Login</a></li>
-            <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
+            
 
             <button id="darkModeToggle" class="dark-toggle">🌙</button>
         </ul>

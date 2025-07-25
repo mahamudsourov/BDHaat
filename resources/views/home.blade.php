@@ -25,14 +25,31 @@
 
 
         <!-- Center: Search Bar + Search Icon + Cart -->
-        <div id="search-cart">
+        <div id="search-cart" style="display: flex; align-items: center; gap: 20px;">
             <div class="search-box">
                 <input type="text" placeholder="Search products..." id="search-bar" />
                 <button id="search-button"><i class="fas fa-search"></i></button>
             </div>
-            <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-        </div>
 
+
+           
+
+            <!-- Cart icon with count -->
+            <a href="{{ route('cart') }}" id="cart-icon" style="position: relative; font-size: 24px; color: #333;">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count"
+                    style="
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 2px 6px;
+        ">0</span>
+            </a>
+            
         <!-- Right: Navigation -->
         <ul id="navbar">
             <li><a href="{{ route('home') }}">Home</a></li>
@@ -106,224 +123,249 @@
         </div>
     </section>
 
-    <!-- Trending Product -->
     <section id="product1" class="section-p1">
         <h2>Trending Products</h2>
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
-            <div class="pro">
-                <img src="{{ asset('images/punjabi1.jpg') }}" alt="" />
+
+            
+
+            <!-- Cards with onclick to product details -->
+            <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
+                <img src="{{ asset('images/punjabi1.jpg') }}" alt="">
                 <div class="des">
                     <span>BDHaat-Authentic</span>
                     <h5>Punjabi-1</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <h4>BDT 890</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-
-            <div class="pro">
-                <img src="{{ asset('images/saree1.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('saree1.jpg', 'Tangail', 'Sari-1', 790)">
+                <img src="{{ asset('images/saree1.jpg') }}" alt="">
                 <div class="des">
                     <span>Tangail</span>
                     <h5>Sari-1</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <h4>BDT 790</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/chomchom.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('sari2.webp', 'Tangail', 'Sari-2', 1050)">
+                <img src="{{ asset('images/sari2.webp') }}" alt="">
                 <div class="des">
                     <span>Tangail</span>
-                    <h5>Chomchom</h5>
+                    <h5>Sari-2</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <h4>BDT 1050</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/punjabi2.webp') }}" alt="" />
+            <div class="pro" onclick="goToDetails('tripori_clothes.jpg', 'Bandarban', 'Tripori', 990)">
+                <img src="{{ asset('images/tripori_clothes.jpg') }}" alt="">
                 <div class="des">
-                    <span>Dhaka</span>
-                    <h5>Punjabi-2</h5>
+                    <span>Bandarban</span>
+                    <h5>Tripori</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <h4>BDT 990</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/honey1.avif') }}" alt="" />
+            <div class="pro" onclick="goToDetails('sari5.jpeg', 'Dhaka', 'Sari-3', 840)">
+                <img src="{{ asset('images/sari5.jpeg') }}" alt="">
                 <div class="des">
-                    <span>Healthy Food</span>
-                    <h5>Honey</h5>
+                    <span>Dhaka</span>
+                    <h5>Sari-3</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <h4>BDT 840</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/sweets1.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('couple.jpg', 'Rangamati', 'Couple', 3080)">
+                <img src="{{ asset('images/couple.jpg') }}" alt="">
                 <div class="des">
-                    <span>Cumilla</span>
-                    <h5>Sweets1</h5>
+                    <span>Rangamati</span>
+                    <h5>Couple</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 1280</h4>
+                    <h4>BDT 3080</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/khejur1.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('punjabi2.webp', 'Dhaka', 'Panjabi-2', 1050)">
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="">
                 <div class="des">
-                    <span>Healthy Foods</span>
-                    <h5>Khejur-1</h5>
+                    <span>Dhaka</span>
+                    <h5>Panjabi-2</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 1950</h4>
+                    <h4>BDT 1050</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/mango1.jpeg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('Tribal.jpg', 'Rangamati', 'Tribal-1', 1500)">
+                <img src="{{ asset('images/Tribal.jpg') }}" alt="">
                 <div class="des">
-                    <span>Rajshahi</span>
-                    <h5>Mango-1</h5>
+                    <span>Rangamati</span>
+                    <h5>Tribal-1</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 3150</h4>
+                    <h4>BDT 1500</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
+
         </div>
     </section>
 
     <!-- BD mart -->
     <!-- New Arrival -->
 
-    <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>fresh fruits and Traditional Foods</p>
+   <section id="product1" class="section-p1">
+       <h2>New Arrivals</h2>
+        <p>fresh fruits and Traditional Foods</p></p>
         <div class="pro-container">
-            <div class="pro">
-                <img src="{{ asset('images/তিলখাওয়া খাজা1.jpeg') }}" alt="" />
+            <!-- Cards with onclick to product details -->
+            <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
+                <img src="{{ asset('images/punjabi1.jpg') }}" alt="">
                 <div class="des">
-                    <span>Khaja</span>
-                    <h5>Foods</h5>
+                    <span>BDHaat-Authentic</span>
+                    <h5>Punjabi-1</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 160</h4>
+                    <h4>BDT 890</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/honeyNuts1.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('saree1.jpg', 'Tangail', 'Sari-1', 790)">
+                <img src="{{ asset('images/saree1.jpg') }}" alt="">
                 <div class="des">
-                    <span>Honeynuts</span>
-                    <h5>Healthy Foods</h5>
+                    <span>Tangail</span>
+                    <h5>Sari-1</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 999</h4>
+                    <h4>BDT 790</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/মহিষ দুধের ঘি1.jpg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('sari2.webp', 'Tangail', 'Sari-2', 1050)">
+                <img src="{{ asset('images/sari2.webp') }}" alt="">
                 <div class="des">
-                    <span>Mohisher Dudher Ghee</span>
-                    <h5>Traditional Foods</h5>
+                    <span>Tangail</span>
+                    <h5>Sari-2</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 950</h4>
+                    <h4>BDT 1050</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro">
-                <img src="{{ asset('images/mango2.jpeg') }}" alt="" />
+            <div class="pro" onclick="goToDetails('tripori_clothes.jpg', 'Bandarban', 'Tripori', 990)">
+                <img src="{{ asset('images/tripori_clothes.jpg') }}" alt="">
                 <div class="des">
-                    <span>Rajshahi Mango</span>
-                    <h5>Fruits</h5>
+                    <span>Bandarban</span>
+                    <h5>Tripori</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <h4>BDT 250</h4>
+                    <h4>BDT 990</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
+
+            <div class="pro" onclick="goToDetails('sari5.jpeg', 'Dhaka', 'Sari-3', 840)">
+                <img src="{{ asset('images/sari5.jpeg') }}" alt="">
+                <div class="des">
+                    <span>Dhaka</span>
+                    <h5>Sari-3</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 840</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="goToDetails('couple.jpg', 'Rangamati', 'Couple', 3080)">
+                <img src="{{ asset('images/couple.jpg') }}" alt="">
+                <div class="des">
+                    <span>Rangamati</span>
+                    <h5>Couple</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 3080</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="goToDetails('punjabi2.webp', 'Dhaka', 'Panjabi-2', 1050)">
+                <img src="{{ asset('images/punjabi2.webp') }}" alt="">
+                <div class="des">
+                    <span>Dhaka</span>
+                    <h5>Panjabi-2</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1050</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="goToDetails('Tribal.jpg', 'Rangamati', 'Tribal-1', 1500)">
+                <img src="{{ asset('images/Tribal.jpg') }}" alt="">
+                <div class="des">
+                    <span>Rangamati</span>
+                    <h5>Tribal-1</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT 1500</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
         </div>
     </section>
 
@@ -448,9 +490,12 @@
         </form>
     </div>
 </div>
+
+<script src="{{ asset('js/clothes.js') }}"></script>
+    <script src="{{ asset('js/darkmode.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
 
-<script src="{{ asset('js/darkmode.js') }}"></script>
+
 
 
 </html>

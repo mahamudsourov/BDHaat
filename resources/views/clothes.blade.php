@@ -60,6 +60,7 @@
                         <li><a href="{{ route('food') }}">Foods</a></li>
                     </ul>
                 </li>
+                <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
                 <li class="dropdown">
                     <a href="#">Help & Support</a>
                     <ul class="dropdown-menu">
@@ -71,7 +72,7 @@
                     </ul>
                 </li>
 
-                <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
+                
                
                 
             <li>
@@ -85,7 +86,6 @@
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
 
-            
 
             <!-- Cards with onclick to product details -->
             <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
