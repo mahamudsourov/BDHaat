@@ -1,92 +1,50 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RedirectController;
 
+// ---------- Public Pages ---------- //
+Route::view('/', 'login')->name('login');
+Route::view('/home', 'home')->name('home');
+Route::view('/about', 'about')->name('about');
+Route::view('/clothes', 'clothes')->name('clothes');
+Route::view('/food', 'food')->name('food');
+Route::view('/healthy_food', 'healthy_food')->name('healthy_food');
+Route::view('/helpcenter', 'helpcenter')->name('helpcenter');
+Route::view('/customercare', 'customercare')->name('customercare');
+Route::view('/product-details', 'product-details')->name('product.details');
+Route::view('/cart', 'cart')->name('cart');
+Route::view('/checkout', 'checkout')->name('checkout');
+Route::view('/order', 'order')->name('order');
+Route::view('/payment', 'payment')->name('payment');
+Route::view('/returnrefund', 'returnrefund')->name('returnrefund');
+Route::view('/contact', 'contact')->name('contact');
 
-// Home Page
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// ---------- Auth Routes ---------- //
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// About Page
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+// ---------- Redirect Logic After Login ---------- //
+Route::get('/redirect', [RedirectController::class, 'handle'])->name('redirect');
 
-// Login Page
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// ---------- Protected Admin Route ---------- //
+Route::get('/admin/dashboard', function () {
+    // If not logged in
+    if (!Auth::check()) {
+        return redirect('/login');
+    }
 
-// Register Page
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+    // If logged in but not admin
+    if (Auth::user()->role !== 'admin') {
+        return redirect('/'); // or you can show a 403 forbidden page
+    }
 
-Route::get('/clothes', function () {
-    return view('clothes');
-})->name('clothes');
-
-Route::get('/food', function () {
-    return view('food');
-})->name('food');
-
-Route::get('/helpcenter', function () {
-    return view('helpcenter');
-})->name('helpcenter');
-
-Route::get('/order', function () {
-    return view('order');
-})->name('order');
-
-Route::get('/payment', function () {
-    return view('payment');
-})->name('payment');
-
-Route::get('/returnrefund', function () {
-    return view('returnrefund');
-})->name('returnrefund');
-
-Route::get('/healthy_food', function () {
-    return view('healthy_food');
-})->name('healthy_food');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/help-center', function () {
-    return view('helpcenter');
-})->name('helpcenter');
-
-Route::get('/customercare', function () {
-    return view('customercare');
-})->name('customercare');
-
-Route::get('/clothes', function () {
-    return view('clothes');
-})->name('clothes');
-
-Route::get('/product-details', function () {
-    return view('product-details');
-})->name('product.details');
-
-Route::get('/cart', function () {
-    return view('cart');
-})->name('cart');
-
-Route::get('/checkout', function () {
-    return view('checkout');
-})->name('checkout');
-
-Route::get('/order', function () {
-    return view('order');
-})->name('order');
-
-
-
-
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-
+    // If admin
+    return app(AdminController::class)->dashboard();
+})->name('admin.dashboard');

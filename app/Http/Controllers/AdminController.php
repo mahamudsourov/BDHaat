@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $totalUsers = Users::count();
+        $totalUsers = User::count();
         $totalOrders = Order::count();
         $totalProducts = Product::count();
         $totalRevenue = Payment::sum('amount');
