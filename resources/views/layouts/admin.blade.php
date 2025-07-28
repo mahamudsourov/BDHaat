@@ -5,7 +5,46 @@
     <title>Admin - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body { display: flex; min-height: 100vh; background-color: #f4f6f9; margin: 0;}
+        .sidebar {
+            width: 250px; background-color: #1f2a3a; color: #fff;
+            display: flex; flex-direction: column; padding: 1rem 0;
+        }
+        .sidebar .brand {
+            font-size: 1.75rem; font-weight: bold; text-align: center;
+            margin-bottom: 2rem;
+        }
+        .sidebar nav a {
+            display: flex; align-items: center; padding: 0.75rem 1rem;
+            color: #cfd8dc; text-decoration: none; font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .sidebar nav a i { margin-right: 10px; font-size: 1.2rem; }
+        .sidebar nav a:hover, .sidebar nav a.active {
+            background-color: #273142; color: #fff;
+        }
+        main.content {
+            flex-grow: 1; padding: 2rem; overflow-y: auto;
+        }
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar {
+                width: 100%; flex-direction: row; overflow-x: auto;
+            }
+            .sidebar nav {
+                display: flex; flex-direction: row; width: 100%; justify-content: space-around;
+            }
+            .sidebar nav a {
+                flex: 1; justify-content: center; padding: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <aside class="sidebar">
