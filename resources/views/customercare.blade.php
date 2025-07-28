@@ -13,7 +13,6 @@
 
 <body>
     <section id="header">
-        <!-- Left: Logo + Name -->
         <div id="logo-area">
             <a href="{{ url('/') }}">
                 <img src="{{ asset('images/logo.png') }}" height="40" width="40" alt="Logo" />
@@ -21,7 +20,6 @@
             <span class="brand-name">BDHaat</span>
         </div>
 
-        <!-- Center: Search Bar + Search Icon + Cart -->
         <div id="search-cart">
             <div class="search-box">
                 <input type="text" placeholder="Search products..." id="search-bar" />
@@ -30,7 +28,6 @@
             <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
 
-        <!-- Right: Navigation -->
         <ul id="navbar">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li class="dropdown">
@@ -41,7 +38,6 @@
                 </ul>
             </li>
             <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
-            
             <li class="dropdown">
                 <a href="#">Help & Support</a>
                 <ul class="dropdown-menu">
@@ -52,7 +48,6 @@
                     <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
                 </ul>
             </li>
-
             <li>
                 <button id="darkModeToggle" class="dark-toggle">🌙</button>
             </li>
@@ -72,7 +67,7 @@
         </div>
 
         <div class="chatbot-body" id="chatbotBody">
-            <!-- Combined Carousel + Dropdown Card -->
+            <!-- Info Card -->
             <div class="info-card">
                 <div class="carousel">
                     <div class="carousel-track">
@@ -81,13 +76,18 @@
                         <img src="{{ asset('images/khejur1.jpg') }}" alt="Slide 3">
                     </div>
                 </div>
-                <!-- Bot welcome message -->
+
+                <!-- Bot Welcome Message -->
                 <div class="bot-welcome">
                     <img src="{{ asset('images/chatbot.png') }}" class="bot-avatar" alt="avatar">
-                    <div class="bot-msg">Dear Sir! Hope you are having a great day!<br>Ask me anything, I'm here to
-                        help.</div>
+                    <div class="bot-msg">
+                        Dear Sir! Hope you are having a great day!<br>
+                        Ask me anything, I'm here to help.
+                    </div>
                 </div>
 
+
+                <!-- Dropdowns -->
                 <div class="dropdowns">
                     <details>
                         <summary>Offers & Discounts</summary>
@@ -112,10 +112,23 @@
                 <button class="chat-btn">Explore More</button>
                 <button class="chat-btn">বাংলাতে চ্যাট করুন</button>
             </div>
+
+            <!-- User Input Field -->
+            <div class="chatbot-container">
+                <div class="chatbot-body" id="chatbotBody">
+                    <!-- All chat messages will go here -->
+                </div>
+
+                <div class="chatbot-footer">
+                    <input type="text" id="userInput" placeholder="Type your message...">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    {{-- Form --}}
+    {{-- Contact Form --}}
     <section id="form-details">
         <form id="contactForm" class="contact-form">
             <span class="form-subtitle">Message Us</span>
@@ -131,19 +144,14 @@
         </form>
     </section>
 
-
-    <!-- Footer -->
-
+    {{-- Footer --}}
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="img/logo.png" alt="" />
             <h4>Contact</h4>
-            <p>
-                <strong>Address: </strong>House 273, Road 13, Block C, Mirpur 6, Dhaka
-                1216
-            </p>
-            <p><strong>Phone</strong> +8801787087017 / +8801737611605</p>
-            <p><strong>Hours</strong> 8:00 AM - 11:59 PM, Sat - Thu</p>
+            <p><strong>Address: </strong>House 273, Road 13, Block C, Mirpur 6, Dhaka 1216</p>
+            <p><strong>Phone:</strong> +8801787087017 / +8801737611605</p>
+            <p><strong>Hours:</strong> 8:00 AM - 11:59 PM, Sat - Thu</p>
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="icon">
@@ -197,9 +205,10 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="{{ asset('js/contact.js') }}"></script>
     <script src="{{ asset('js/darkmode.js') }}"></script>
-
+    <script src="{{ asset('js/chatbot.js') }}"></script>
 </body>
 
 </html>

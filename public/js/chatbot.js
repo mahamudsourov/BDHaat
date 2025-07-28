@@ -4,25 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatbotBody = document.getElementById("chatbotBody");
     const quickButtons = document.querySelectorAll(".chat-btn");
 
-    // Handle Send Button & Enter key
+    // Send message on button click or Enter key
     sendBtn.addEventListener("click", sendMessage);
     userInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") sendMessage();
     });
 
-    // Handle quick option buttons
+    // Handle Quick Option Buttons
     quickButtons.forEach(button => {
         button.addEventListener("click", function () {
             const text = button.textContent.trim();
             appendMessage(text, 'user-msg');
-
-            setTimeout(() => {
-                if (text === "বাংলাতে চ্যাট করুন") {
-                    appendMessage("আপনার কীভাবে সাহায্য করতে পারি? বাংলায় আপনার প্রশ্ন করুন।", 'bot-msg');
-                } else {
-                    appendMessage("Thanks for your message! Our support team will get back to you shortly.", 'bot-msg');
-                }
-            }, 800);
+            botReply(text);
         });
     });
 
@@ -32,17 +25,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
         appendMessage(text, 'user-msg');
         userInput.value = "";
+        botReply(text);
+    }
 
+    function botReply(userText) {
         setTimeout(() => {
-            appendMessage("Thanks for your message! Our support team will get back to you shortly.", 'bot-msg');
+            let reply;
+            switch (userText) {
+                case "Order Information":
+                    reply = "Your order details can be found in the 'My Orders' section.";
+                    break;
+                case "Track Complaints":
+                    reply = "Please provide your complaint ID to track it.";
+                    break;
+                case "Submit Feedback":
+                    reply = "We appreciate your feedback! Let us know what we can improve.";
+                    break;
+                case "Explore More":
+                    reply = "Browse our catalog to explore traditional and healthy products.";
+                    break;
+                case "বাংলাতে চ্যাট করুন":
+                    reply = "আপনার কীভাবে সাহায্য করতে পারি? বাংলায় আপনার প্রশ্ন করুন।";
+                    break;
+                default:
+                    reply = "Thanks for your message! Our support team will get back to you shortly.";
+            }
+            appendMessage(reply, 'bot-msg');
         }, 800);
     }
 
     function appendMessage(msg, className) {
-        const msgDiv = document.createElement("div");
-        msgDiv.className = className;
-        msgDiv.textContent = msg;
-        chatbotBody.appendChild(msgDiv);
-        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    const msgWrapper = document.createElement("div");
+    msgWrapper.className = className + "-wrapper";
+
+    const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    if (className === "bot-msg") {
+        const avatar = document.createElement("img");
+        avatar.src = "/images/chatbot.png"; // adjust if path is different
+        avatar.className = "chat-avatar";
+        msgWrapper.appendChild(avatar);
     }
+
+    const msgBubble = document.createElement("div");
+    msgBubble.className = className;
+
+    const textSpan = document.createElement("span");
+    textSpan.textContent = msg;
+
+    const time = document.createElement("div");
+    time.className = "msg-time";
+    time.textContent = timestamp;
+
+    msgBubble.appendChild(textSpan);
+    msgBubble.appendChild(time);
+
+    msgWrapper.appendChild(msgBubble);
+
+   
+
+    chatbotBody.appendChild(msgWrapper);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+}
+
 });
