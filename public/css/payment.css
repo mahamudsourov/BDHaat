@@ -1,0 +1,137 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    font-size: 14px; 
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-weight: 600;
+    font-size: 24px;      
+    margin-bottom: 12px;  
+    color: #004085;
+}
+
+.subtitle {
+    color: #004a99;
+    margin-bottom: 40px;
+    font-size: 14px;     
+    font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    text-align: left; 
+    font-size: 14px;  
+    line-height: 1.5;
+}
+
+/* Section Titles inside cards */
+.card h2 {
+    font-size: 18px; 
+    color: #004a99;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Payment Methods */
+.payment-methods ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 14px;  
+}
+
+.payment-methods li {
+    margin-bottom: 12px;
+}
+
+/* Transaction History Table */
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;  
+}
+
+.transaction-history th,
+.transaction-history td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-history th {
+    background-color: #f4f6f8;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;  
+}
+
+.transaction-history tbody tr:hover {
+    background-color: #f0f5f9;
+    cursor: default;
+}
+
+/* Status Badges */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px; 
+    display: inline-block;
+    min-width: 75px;
+    text-align: center;
+}
+
+.status.paid {
+    background-color: #28a745;
+}
+
+.status.pending {
+    background-color: #ffc107; 
+    color: #212529;
+}
+
+.status.refunded {
+    background-color: #dc3545; 
+}
+
+/* FAQ Section */
+.faq-section h2 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 18px; 
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h4 {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #222;
+    font-size: 14px;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 14px; 
+}
