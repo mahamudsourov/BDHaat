@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\Admin\ProductManagement\HealthyFoodController;
+
+
 
 // ---------- Public Pages ---------- //
 Route::view('/', 'login')->name('login');
@@ -48,3 +51,7 @@ Route::get('/admin/dashboard', function () {
     // If admin
     return app(AdminController::class)->dashboard();
 })->name('admin.dashboard');
+
+Route::get('/admin/healthyfoods/create', [HealthyFoodController::class, 'create'])->name('admin.healthyfoods.create');
+Route::post('/admin/healthyfoods/store', [HealthyFoodController::class, 'store'])->name('admin.healthyfoods.store');
+
