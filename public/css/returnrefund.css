@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.return-container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+h4 {
+    margin-top: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.list-group-item {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s ease forwards;
+}
+
+.list-group-item:nth-child(1) { animation-delay: 0.2s; }
+.list-group-item:nth-child(2) { animation-delay: 0.4s; }
+.list-group-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.list-group-item i {
+    color: #0d6efd;
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.list-group-item:hover i {
+    transform: scale(1.2);
+    color: #6610f2;
+}
+
+p, li {
+    color: #444;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6610f2;
+}
+.accordion-button {
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #f0f8ff;
+    color: #0d6efd;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #e0e8ff;
+    color: #6610f2;
+}
+.accordion-body {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .return-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+}
