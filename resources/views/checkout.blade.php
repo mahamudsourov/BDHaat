@@ -1,73 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Checkout - BDHaat</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+@extends('index')
+@section('title', 'Checkout')
+@push('styles')
     <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
-</head>
+@endpush
 
-<body>
+@section('content')
 
-     <section id="header">
-        <!-- Left: Logo + Name -->
-        <div id="logo-area">
-            <a href="{{ url('/') }}">
-                <img src="{{ asset('images/logo.png') }}" height="40" width="40" alt="Logo" />
-            </a>
-            <span class="brand-name">BDHaat</span>
-        </div>
-
-
-        <!-- Center: Search Bar + Search Icon + Cart -->
-        <div id="search-cart">
-            <div class="search-box">
-                <input type="text" placeholder="Search products..." id="search-bar" />
-                <button id="search-button"><i class="fas fa-search"></i></button>
-            </div>
-            <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-
-        
-
-        <!-- Right: Navigation -->
-        <ul id="navbar">
-            <li><a href="{{ route('home') }}">Home</a></li>
-
-            <li class="dropdown">
-                <a href="#">Traditional Products</a>
-                <ul class="dropdown-menu">
-                    <li><a href="{{ route('clothes') }}">Clothes</a></li>
-                    <li><a href="{{ route('food') }}">Foods</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Help & Support</a>
-                <ul class="dropdown-menu">
-                    <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
-                    <li><a href="{{ route('customercare') }}">Contact Customer Care</a></li>
-                    <li><a href="{{ route('order') }}">Order</a></li>
-                    <li><a href="{{ route('payment') }}">Payment</a></li>
-                    <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
-                </ul>
-            </li>
-
-            <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
-            
-
-            <li>
-                <button id="darkModeToggle" class="dark-toggle">🌙</button>
-            </li>
-
-        </ul>
-    </section>
-
-
-
-    <div></div>
     <div class="checkout-container">
         <h2>Checkout</h2>
 
@@ -89,11 +27,11 @@
     </div>
 
 
-     <!-- Footer -->
+    <!-- Footer -->
 
     <footer class="section-p1">
         <div class="col">
-            <img class="logo" src="img/logo.png" alt="" />
+            <img class="logo" src="{{ asset('images/logo.png') }}" alt="BDHaat Logo" />
             <h4>Contact</h4>
             <p>
                 <strong>Address: </strong>House 273, Road 13, Block C, Mirpur 6, Dhaka
@@ -135,10 +73,11 @@
             <h4>Install App</h4>
             <p>From App Store or Google Play</p>
             <div class="row">
-                <img src="img/pay/app.jpg" alt="" />
-                <img src="img/pay/play.jpg" alt="" />
+                <!-- App store and Google Play images need to be added to the images directory -->
+                <img src="{{ asset('images/logo.png') }}" alt="App Store" />
+                <img src="{{ asset('images/logo.png') }}" alt="Google Play" />
             </div>
-           <div class="secured-payment">
+            <div class="secured-payment">
                 <p class="payment-title">Secured Payment Gateways</p>
                 <div class="payment-icons">
                     <img src="{{ asset('images/bkash.png') }}" alt="Bkash">
@@ -153,12 +92,8 @@
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
+@endsection
 
-    <script src="{{ asset('js/contact.js') }}"></script>
-    <script src="{{ asset('js/darkmode.js') }}"></script>
-
+@push('scripts')
     <script src="{{ asset('js/checkout.js') }}"></script>
-    
-</body>
-
-</html>
+@endpush

@@ -4,7 +4,6 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 @endpush
 
 @section('content')
@@ -292,7 +291,7 @@
 
     <footer class="section-p1">
         <div class="col">
-            <img class="logo" src="img/logo.png" alt="" />
+            <img class="logo" src="{{ asset('images/logo.png') }}" alt="BDHaat Logo" />
             <h4>Contact</h4>
             <p>
                 <strong>Address: </strong>House 273, Road 13, Block C, Mirpur 6, Dhaka
@@ -334,8 +333,9 @@
             <h4>Install App</h4>
             <p>From App Store or Google Play</p>
             <div class="row">
-                <img src="img/pay/app.jpg" alt="" />
-                <img src="img/pay/play.jpg" alt="" />
+                <!-- App store and Google Play images need to be added to the images directory -->
+                <img src="{{ asset('images/logo.png') }}" alt="App Store" />
+                <img src="{{ asset('images/logo.png') }}" alt="Google Play" />
             </div>
             <div class="secured-payment">
                 <p class="payment-title">Secured Payment Gateways</p>
