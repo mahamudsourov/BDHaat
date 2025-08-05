@@ -28,4 +28,25 @@ class AdminController extends Controller
         }
         return redirect('/login');
     }
+    
+    public function showUsers()
+    {
+        if (Auth::check() && Auth::user()->role === 'admin') {
+            $users = User::all();
+            return view('admin.user.user', compact('users'));
+        }
+    }
+
+    public function deleteUser($id)
+    {
+    $user = User::find($id);
+
+    if ($user && $user->role === 'user') {
+        $user->delete();
+        return redirect()->back()->with('success', 'User deleted successfully!');
+    }
+
+    return redirect()->back()->with('error', 'User not found or not deletable.');
+    }
+
 }
