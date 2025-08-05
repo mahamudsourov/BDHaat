@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Payment;
 use App\Models\Users;
+use App\Models\Message;
 
 class AdminController extends Controller
 {
@@ -18,6 +19,12 @@ class AdminController extends Controller
         $totalRevenue = Payment::sum('amount');
 
         return view('admin.dashboard', compact('totalUsers', 'totalOrders', 'totalProducts', 'totalRevenue'));
+    }
+
+    public function showMessages()
+    {
+        $messages = Message::all();
+        return view('admin.message.message', compact('messages'));
     }
 }
 

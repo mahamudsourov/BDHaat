@@ -110,7 +110,7 @@
             <a href="#" class="{{ request()->routeIs('admin.payments.*') ? 'active' : '' }}">
                 <i class="bi bi-credit-card-2-front"></i> Payments
             </a>
-            <a href="#" class="{{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.messages') }}" class="{{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
                 <i class="bi bi-chat-text"></i> Messages
             </a>
             <a href="{{ route('logout') }}">

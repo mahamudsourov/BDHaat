@@ -53,6 +53,8 @@ Route::get('/admin/dashboard', function () {
     return app(AdminController::class)->dashboard();
 })->name('admin.dashboard');
 
+Route::get('/admin/messages', [AdminController::class, 'showMessages'])->name('admin.messages');
+
 // Product Management → Healthy Foods
     Route::get('/healthyfoods/create', [HealthyFoodController::class, 'create'])->name('healthyfoods.create');
     Route::post('/healthyfoods/store', [HealthyFoodController::class, 'store'])->name('healthyfoods.store');
