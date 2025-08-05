@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const message = form.elements["message"].value.trim();
 
         // Validate required fields
-        if (!name || !email || !subject || !message) {
+        if (!name || !email || !message) {
             showStatus("❌ Please fill in all required fields.", "red");
             return;
         }
@@ -25,16 +25,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
         showStatus("⏳ Sending...", "#024ecf");
 
-        // Simulate successful submission
-        setTimeout(() => {
-            showStatus("✅ Message sent successfully!", "green");
-            form.reset();
-
-            // Hide status after 5 seconds
-            setTimeout(() => {
-                status.style.display = "none";
-            }, 5000);
-        }, 1500);
+        // Create FormData object
+        const formData = new FormData(form);
+        
+        // Send AJAX request
+        fetch('/submit-contact', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showStatus("✅ " + data.success + " We'll contact you shortly.", "green");
+                form.reset();
+                
+                // Hide status after 5 seconds
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 5000);
+            } else {
+                showStatus("❌ Something went wrong. Please try again.", "red");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showStatus("❌ An error occurred. Please try again later.", "red");
+        });
     });
 
     function showStatus(message, color) {

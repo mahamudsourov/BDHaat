@@ -125,9 +125,12 @@
 #form-status {
     font-size: 1rem;
     text-align: center;
-    margin-top: 10px;
-    color: green;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
     display: none;
+    transition: all 0.3s ease;
 }
 
 #page-header3 {

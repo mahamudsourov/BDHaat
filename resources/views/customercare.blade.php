@@ -131,7 +131,7 @@
 
     {{-- Contact Form --}}
     <section id="form-details">
-        <form id="contactForm" class="contact-form" action="{{ route('contact.submit') }}" method="POST">
+        <form id="contactForm" class="contact-form">
             @csrf
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <span class="form-subtitle">Message Us</span>
@@ -212,6 +212,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/darkmode.js') }}"></script>
     <script src="{{ asset('js/chatbot.js') }}"></script>
+    <script src="{{ asset('js/contact.js') }}"></script>
 </body>
 
 </html>
