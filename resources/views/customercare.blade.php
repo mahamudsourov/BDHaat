@@ -115,10 +115,11 @@
 
             <!-- User Input Field -->
             <div class="chatbot-container">
-                <div class="chatbot-body" id="chatbotBody">
+                
+                <div class="chatbot-messages" id="chatMessages">
                     <!-- All chat messages will go here -->
                 </div>
-
+                
                 <div class="chatbot-footer">
                     <input type="text" id="userInput" placeholder="Type your message...">
                     <button id="sendBtn">Send</button>

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sendBtn = document.getElementById("sendBtn");
     const userInput = document.getElementById("userInput");
-    const chatbotBody = document.getElementById("chatbotBody");
+    const chatMessages = document.getElementById("chatMessages");
     const quickButtons = document.querySelectorAll(".chat-btn");
 
     // Send message on button click or Enter key
@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
         msgWrapper.appendChild(userAvatar);
     }
 
-    chatbotBody.appendChild(msgWrapper);
-    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    chatMessages.appendChild(msgWrapper);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 });
