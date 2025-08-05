@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('admin.layouts.admin')
 
 @section('title', 'User Messages')
 
@@ -14,7 +14,7 @@
                 <ul class="list-group">
                     @foreach($messages as $message)
                         <li class="list-group-item">
-                            <p>Name: {{ $message->name }}</p>
+                            <p>Name {{ $message->name }}</p>
                             <p>Email: {{ $message->email }}</p>
                             <p>Subject: <strong>{{ $message->subject }}</strong></p>
                             <p>Message: {{ $message->message }}</p>

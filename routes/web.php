@@ -11,8 +11,8 @@ use App\Http\Controllers\ContactController;
 
 
 // ---------- Public Pages ---------- //
-Route::view('/', 'login')->name('login');
-Route::view('/home', 'home')->name('home');
+Route::view('/', 'home')->name('home');
+Route::view('/login', 'login')->name('login');
 Route::view('/about', 'about')->name('about');
 Route::view('/clothes', 'clothes')->name('clothes');
 Route::view('/food', 'food')->name('food');

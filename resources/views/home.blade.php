@@ -1,95 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('index')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=vz, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+@section('title', 'BDHaat - Home')
+
+@push('styles')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
-    <title>BDHaat</title>
+@endpush
 
-</head>
-
-<body>
-    <section id="header">
-        <!-- Left: Logo + Name -->
-        <div id="logo-area">
-            <a href="{{ url('/') }}">
-                <img src="{{ asset('images/logo.png') }}" height="40" width="40" alt="Logo" />
-            </a>
-            <span class="brand-name">BDHaat</span>
-        </div>
-
-
-        <!-- Center: Search Bar + Search Icon + Cart -->
-        <div id="search-cart" style="display: flex; align-items: center; gap: 20px;">
-            <div class="search-box">
-                <input type="text" placeholder="Search products..." id="search-bar" />
-                <button id="search-button"><i class="fas fa-search"></i></button>
-            </div>
-
-
-           
-
-            <!-- Cart icon with count -->
-            <a href="{{ route('cart') }}" id="cart-icon" style="position: relative; font-size: 24px; color: #333;">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-count"
-                    style="
-            position: absolute;
-            top: -8px;
-            right: -10px;
-            background-color: red;
-            color: white;
-            font-size: 12px;
-            border-radius: 50%;
-            padding: 2px 6px;
-        ">0</span>
-            </a>
-            
-        <!-- Right: Navigation -->
-        <ul id="navbar">
-            <li><a href="{{ route('home') }}">Home</a></li>
-
-
-
-            <li class="dropdown">
-                <a href="#">Traditional Products</a>
-                <ul class="dropdown-menu">
-                    <li><a href="{{ route('clothes') }}">Clothes</a></li>
-                    <li><a href="{{ route('food') }}">Foods</a></li>
-                </ul>
-            </li>
-
-            <li><a href="{{ route('healthy_food') }}">Healthy Foods</a></li>
-
-
-            <li class="dropdown">
-                <a href="#">Help & Support</a>
-                <ul class="dropdown-menu">
-                    
-                    <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
-                    <li><a href="{{ route('customercare') }}">Contact Customer Care</a></li>
-                    <li><a href="{{ route('order') }}">Order</a></li>
-                    <li><a href="{{ route('payment') }}">Payment</a></li>
-                    <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
-                </ul>
-            </li>
-
-            <li><a href="#" id="openLoginBtn">Login</a></li>
-            <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
-
-            <li>
-                <button id="darkModeToggle" class="dark-toggle">🌙</button>
-            </li>
-
-
-        </ul>
-    </section>
-    {{-- Hero Section --}}
+@section('content')
+    @include('user.navbar.navbar')
 
     <section id="hero">
         <h1>Easy way to Shop</h1>
@@ -128,7 +49,7 @@
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
 
-            
+
 
             <!-- Cards with onclick to product details -->
             <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
@@ -249,9 +170,10 @@
     <!-- BD mart -->
     <!-- New Arrival -->
 
-   <section id="product1" class="section-p1">
-       <h2>New Arrivals</h2>
-        <p>fresh fruits and Traditional Foods</p></p>
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>fresh fruits and Traditional Foods</p>
+        </p>
         <div class="pro-container">
             <!-- Cards with onclick to product details -->
             <div class="pro" onclick="goToDetails('punjabi1.jpg', 'BDHaat-Authentic', 'Punjabi-1', 890)">
@@ -433,7 +355,7 @@
             <p>&copy; BDHaat. All rights reserved.</p>
         </div>
     </footer>
-    
+
 </body>
 
 <!-- Login Modal -->
@@ -491,11 +413,10 @@
     </div>
 </div>
 
-<script src="{{ asset('js/clothes.js') }}"></script>
+@endsection
+
+@push('scripts')
+    <script src="{{ asset('js/clothes.js') }}"></script>
     <script src="{{ asset('js/darkmode.js') }}"></script>
-<script src="{{ asset('js/login.js') }}"></script>
-
-
-
-
-</html>
+    <script src="{{ asset('js/login.js') }}"></script>
+@endpush
