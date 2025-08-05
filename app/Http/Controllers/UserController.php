@@ -2,39 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Message;
-use App\Models\Order;
-use App\Models\Payment;
-use App\Models\Product;
-use App\Models\User;
-use Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
-    public function dashboard()
+    public function profile()
     {
-        $totalUsers    = User::count();
-        $totalOrders   = Order::count();
-        $totalProducts = Product::count();
-        $totalRevenue  = Payment::sum('amount');
-
-        return view('admin.dashboard', compact('totalUsers', 'totalOrders', 'totalProducts', 'totalRevenue'));
+        $user = Auth::user();
+        return view('user.profile', compact('user'));
     }
 
-    public function showMessages()
+    public function edit()
     {
-        if (Auth::check() && Auth::user()->role === 'admin') {
-            $messages = Message::all();
-            return view('admin.message.message', compact('messages'));
-        }
-        return redirect('/login');
+        $user = Auth::user();
+        return view('user.edit', compact('user'));
     }
 
-    public function showUsers()
+    public function update(Request $request)
     {
-        if (Auth::check() && Auth::user()->role === 'admin') {
-            $users = User::all();
-            return view('admin.user.user', compact('users'));
-        }
+        $user = Auth::user();
+
+        $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email|unique:users,email,' . $user->id,
+            'phone'   => 'nullable|string|max:20',
+            'address' => 'nullable|string|max:255',
+        ]);
+
+        $user->update($request->only('name', 'email', 'phone', 'address'));
+
+        return redirect()->route('user.profile')->with('success', 'Profile updated successfully!');
     }
 }
+
