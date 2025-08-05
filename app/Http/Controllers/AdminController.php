@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Payment;
 use App\Models\Users;
 use App\Models\Message;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -23,8 +24,11 @@ class AdminController extends Controller
 
     public function showMessages()
     {
-        $messages = Message::all();
-        return view('admin.message.message', compact('messages'));
+        if (Auth::check() && Auth::user()->role === 'admin') {
+            $messages = Message::all();
+            return view('admin.message.message', compact('messages'));
+        } 
+        return redirect('/login');
     }
 }
 
