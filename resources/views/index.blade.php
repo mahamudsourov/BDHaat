@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    @include('user.navbar.navbar')
     @yield('content')
     @stack('scripts')
 </body>

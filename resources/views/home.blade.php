@@ -4,13 +4,10 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 @endpush
 
 @section('content')
-    @include('user.navbar.navbar')
 
     <section id="hero">
         <h1>Easy way to Shop</h1>
