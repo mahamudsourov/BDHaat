@@ -97,7 +97,7 @@
                 class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                 <i class="bi bi-speedometer2"></i> Dashboard
             </a>
-            <a href="#" class="{{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
                 <i class="bi bi-person-lines-fill"></i> User Management
             </a>
             <a href="{{ route('admin.healthyfoods.create') }}"
@@ -110,7 +110,8 @@
             <a href="#" class="{{ request()->routeIs('admin.payments.*') ? 'active' : '' }}">
                 <i class="bi bi-credit-card-2-front"></i> Payments
             </a>
-            <a href="{{ route('admin.messages') }}" class="{{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.messages') }}"
+                class="{{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
                 <i class="bi bi-chat-text"></i> Messages
             </a>
             <a href="{{ route('logout') }}">
