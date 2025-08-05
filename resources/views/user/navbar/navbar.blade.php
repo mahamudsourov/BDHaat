@@ -62,10 +62,18 @@
                      <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
                  </ul>
              </li>
-
-             <li><a href="#" id="openLoginBtn">Login</a></li>
-             <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
-
+             @if (Auth::check())
+                 <li>
+                     <a href="{{ route('logout') }}" id="logoutBtn">Logout</a>
+                 </li>
+             @else
+                 <li>
+                     <a href="{{ route('login') }}" id="openLoginBtn">Login</a>
+                 </li>
+                 <li>
+                     <a href="#" id="openRegisterBtn">Sign Up</a>
+                 </li>
+             @endif
              <li>
                  <button id="darkModeToggle" class="dark-toggle">🌙</button>
              </li>
