@@ -1,94 +1,216 @@
-/* Footer styles extracted from home.css */
+/* Enhanced Footer styles */
 
 footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 50px 5% 30px;
+    border-top: 1px solid #e7e7e7;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
 footer .col {
-    display: flex;
+    display: flex;  
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    flex: 1 0 160px;
+    max-width: 300px;
 }
 
 footer .logo {
     margin-bottom: 30px;
+    max-width: 140px;
+    height: auto;
 }
 
 footer h4 {
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 20px;
-}
-
-footer p {
-    font-size: 13px;
-    margin: 0 0 8px 0;
-}
-
-footer a {
-    font-size: 13px;
-    text-decoration: none;
-    color: #222;
+    font-weight: 600;
+    color: #333;
+    position: relative;
     margin-bottom: 10px;
 }
 
+footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #088178;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+footer a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+    padding-left: 0;
+}
+
 footer .follow {
-    margin-top: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 footer .follow i {
     color: #465b52;
-    padding-right: 4px;
+    font-size: 18px;
+    margin-right: 12px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer .install .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 footer .install .row img {
     border: 1px solid #088178;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    max-height: 40px;
 }
 
 footer .install img {
     margin: 10px 0 15px 0;
+    max-width: 100%;
 }
 
 footer .follow i:hover,
 footer a:hover {
     color: #088178;
+    transform: translateY(-2px);
+}
+
+footer a:hover {
+    padding-left: 8px;
+}
+
+footer .follow i:hover {
+    background-color: #e8f6f5;
 }
 
 .secured-payment {
-    margin-top: 15px;
-    text-align: left; /* or center if you prefer */
+    margin-top: 20px;
+    text-align: left;
+    padding: 15px 0;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
 }
 
 .payment-title {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 12px;
     color: #333;
+    position: relative;
+    display: inline-block;
 }
 
 .payment-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .payment-icons img {
-    height: 30px;
-    width: 45px;
+    height: 34px;
+    width: 50px;
     object-fit: contain;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+    opacity: 0.9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .payment-icons img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 footer .copyright {
     width: 100%;
     text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #e7e7e7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 4% 20px;
+    }
+    
+    footer .col {
+        flex: 1 0 45%;
+        margin-bottom: 25px;
+    }
+    
+    .secured-payment {
+        text-align: center;
+    }
+    
+    .payment-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 30px 4% 15px;
+    }
+    
+    footer .col {
+        flex: 1 0 100%;
+        max-width: none;
+        align-items: center;
+        text-align: center;
+    }
+    
+    footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    footer .follow {
+        align-items: center;
+    }
+    
+    footer .install .row {
+        justify-content: center;
+    }
 }
