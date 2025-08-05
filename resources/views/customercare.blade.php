@@ -131,7 +131,9 @@
 
     {{-- Contact Form --}}
     <section id="form-details">
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" class="contact-form" action="{{ route('contact.submit') }}" method="POST">
+            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <span class="form-subtitle">Message Us</span>
             <h2 class="form-title">We Love to Hear from You!</h2>
 
@@ -142,6 +144,7 @@
 
             <button type="submit" class="submit-btn">Submit</button>
             <div id="form-status"></div>
+
         </form>
     </section>
 
@@ -207,7 +210,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/contact.js') }}"></script>
     <script src="{{ asset('js/darkmode.js') }}"></script>
     <script src="{{ asset('js/chatbot.js') }}"></script>
 </body>

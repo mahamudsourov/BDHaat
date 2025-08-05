@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\Admin\ProductManagement\HealthyFoodController;
+use App\Http\Controllers\ContactController;
 
 
 
@@ -59,3 +60,6 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/healthyfoods/create', [HealthyFoodController::class, 'create'])->name('admin.healthyfoods.create');
 Route::post('/admin/healthyfoods/store', [HealthyFoodController::class, 'store'])->name('admin.healthyfoods.store');
 
+
+// Contact Us
+Route::post('/submit-contact', [ContactController::class, 'store'])->name('contact.submit');
