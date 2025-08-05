@@ -63,6 +63,7 @@
                  </ul>
              </li>
              @if (Auth::check())
+
                  <li>
                      <a href="{{ route('logout') }}" id="logoutBtn">Logout</a>
                  </li>

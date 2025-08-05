@@ -1,10 +1,4 @@
-body {
-    background: linear-gradient(to right, #e3f2fd, #fce4ec);
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
+
 
 .return-container {
     max-width: 850px;

@@ -12,12 +12,11 @@ use App\Http\Controllers\ContactController;
 
 // ---------- Public Pages ---------- //
 Route::view('/', 'home')->name('home');
-Route::view('/login', 'login')->name('login');
 Route::view('/about', 'about')->name('about');
 Route::view('/clothes', 'clothes')->name('clothes');
 Route::view('/food', 'food')->name('food');
 Route::view('/healthy_food', 'healthy_food')->name('healthy_food');
-Route::view('/helpcenter', 'helpcenter')->name('helpcenter');
+Route::view('/helpcenter', 'user.helpcenter')->name('helpcenter');
 Route::view('/customercare', 'customercare')->name('customercare');
 Route::view('/product-details', 'product-details')->name('product.details');
 Route::view('/cart', 'cart')->name('cart');

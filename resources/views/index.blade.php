@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     @stack('styles')
 </head>
 

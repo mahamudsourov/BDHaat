@@ -1,150 +1,178 @@
-.login-modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
+/* Login Page Styles */
+
+/* Main container styling */
+.login-wrapper {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 35px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-wrapper::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 5px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    animation: fadeIn 0.3s ease;
-    backdrop-filter: blur(3px);
+    background-color: #088178;
+    border-radius: 5px 0 0 5px;
 }
 
-.login-modal.show {
-    display: block;
+.login-wrapper h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-@keyframes slideDown {
+.login-wrapper h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #088178;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Form styling */
+.login-wrapper form {
+    margin-top: 25px;
+}
+
+.login-wrapper input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.login-wrapper input:focus {
+    border-color: #088178;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(8, 129, 120, 0.15);
+    background-color: #fff;
+}
+
+.login-wrapper input::placeholder {
+    color: #999;
+}
+
+.login-wrapper button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #088178;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(8, 129, 120, 0.2);
+}
+
+.login-wrapper button:hover {
+    background-color: #066e67;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(8, 129, 120, 0.3);
+}
+
+.login-wrapper button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(8, 129, 120, 0.2);
+}
+
+/* Error messages styling */
+.error-messages {
+    background-color: #fff2f2;
+    border-left: 4px solid #ff6b6b;
+    color: #d63031;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    list-style-type: none;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.error-messages li:last-child {
+    margin-bottom: 0;
+}
+
+/* Registration link */
+.login-wrapper p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+}
+
+.login-wrapper a {
+    color: #088178;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.login-wrapper a:hover {
+    color: #066e67;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .login-wrapper {
+        max-width: 95%;
+        margin: 30px auto;
+        padding: 25px 30px;
+    }
+    
+    .login-wrapper h1 {
+        font-size: 24px;
+    }
+    
+    .login-wrapper input {
+        padding: 12px 14px;
+    }
+    
+    .login-wrapper button {
+        padding: 12px;
+    }
+}
+
+/* Animation effects */
+@keyframes fadeIn {
     from {
-        transform: translateY(-100px);
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.login-modal-content {
-    width: 350px;
-    margin: 8% auto;
-    background: #ffffff;
-    padding: 30px 25px;
-    border-radius: 15px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    animation: slideDown 0.4s ease;
-}
-
-.login-modal-content h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Segoe UI', sans-serif;
-    color: #0a6847;
-}
-
-
-.login-modal-content input {
-    width: 100%;
-    padding: 10px 12px;
-    margin: 8px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: 0.2s;
-}
-
-.login-modal-content input:focus {
-    border-color: #0a6847;
-    outline: none;
-}
-
-.login-modal-content button {
-    width: 100%;
-    background-color: #0a6847;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.login-modal-content button:hover {
-    background-color: #094e38;
-}
-
-.close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.close:hover {
-    color: red;
-}
-
-.error-text {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-    display: none;
-    font-size: 14px; 
-}
-.register-link {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 15px;
-    color: #333;
-}
-
-.register-link a {
-    color: #0a6847;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-    color: #094e38;
-}
-
-@media (max-width: 480px) {
-    .login-modal-content {
-        width: 90%;
-        padding: 25px 20px;
-    }
-
-    .login-modal-content h2 {
-        font-size: 20px;
-    }
-
-    .login-modal-content input,
-    .login-modal-content button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .close {
-        font-size: 20px;
-        top: 8px;
-        right: 10px;
-    }
-
-    .register-link {
-        font-size: 13px;
-    }
+.login-wrapper {
+    animation: fadeIn 0.5s ease-out forwards;
 }
