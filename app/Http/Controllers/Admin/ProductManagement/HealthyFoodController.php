@@ -18,6 +18,43 @@ class HealthyFoodController extends Controller
     $foods = HealthyFood::all();
     return view('admin.healthyfoods.index', compact('foods'));
 }
+public function edit($id)
+{
+    $food = HealthyFood::findOrFail($id);
+    return view('admin.healthyfoods.edit', compact('food'));
+}
+
+public function update(Request $request, $id)
+{
+    $food = HealthyFood::findOrFail($id);
+
+    $request->validate([
+        'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
+        'brand' => 'required|string',
+        'name' => 'required|string',
+        'price' => 'required|numeric'
+    ]);
+
+    if ($request->hasFile('image')) {
+        $path = $request->file('image')->store('products', 'public');
+        $food->image = $path;
+    }
+
+    $food->brand = $request->brand;
+    $food->name = $request->name;
+    $food->price = $request->price;
+    $food->save();
+
+    return redirect()->route('admin.healthyfoods.index')->with('success', 'Product updated successfully!');
+}
+
+public function destroy($id)
+{
+    $food = HealthyFood::findOrFail($id);
+    $food->delete();
+
+    return redirect()->route('admin.healthyfoods.index')->with('success', 'Product deleted successfully!');
+}
 
 
     public function store(Request $request)

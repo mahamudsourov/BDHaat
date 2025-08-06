@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ProductManagement\ClothController;
 use App\Http\Controllers\Admin\ProductManagement\FoodController;
 
 
+
 // ─────────────────────────────────────────────────────────────
 // 🌐 PUBLIC ROUTES
 // ─────────────────────────────────────────────────────────────
@@ -122,4 +123,13 @@ Route::middleware(['auth'])->group(function () {
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('healthyfoods/create', [HealthyFoodController::class, 'create'])->name('healthyfoods.create');
     Route::post('healthyfoods', [HealthyFoodController::class, 'store'])->name('healthyfoods.store');
+});
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('healthyfoods', [HealthyFoodController::class, 'index'])->name('healthyfoods.index');
+    Route::get('healthyfoods/create', [HealthyFoodController::class, 'create'])->name('healthyfoods.create');
+    Route::post('healthyfoods', [HealthyFoodController::class, 'store'])->name('healthyfoods.store');
+    Route::get('healthyfoods/{id}/edit', [HealthyFoodController::class, 'edit'])->name('healthyfoods.edit');
+    Route::put('healthyfoods/{id}', [HealthyFoodController::class, 'update'])->name('healthyfoods.update');
+    Route::delete('healthyfoods/{id}', [HealthyFoodController::class, 'destroy'])->name('healthyfoods.destroy');
 });
