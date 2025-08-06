@@ -100,9 +100,11 @@
             <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
                 <i class="bi bi-person-lines-fill"></i> User Management
             </a>
-            <a href="{{ route('admin.healthyfoods.create') }}"
-                class="{{ request()->routeIs('admin.healthyfoods.*') ? 'active' : '' }}">
-                <i class="bi bi-box-seam"></i> Product Management
+            <a href="{{ route('product.management') }}"
+    class="{{ request()->routeIs('product.management') ? 'active' : '' }}">
+    <i class="bi bi-box-seam"></i> Product Management
+</a>
+
             </a>
             <a href="#" class="{{ request()->routeIs('admin.orders.*') ? 'active' : '' }}">
                 <i class="bi bi-cart-check"></i> Order Management
