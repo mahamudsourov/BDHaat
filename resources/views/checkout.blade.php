@@ -37,5 +37,39 @@
             <button type="submit" class="submit-btn">Place Order</button>
         </form>
     </div>
+
 @endsection
 
+@push('scripts')
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const orderList = document.getElementById("order-summary");
+    const totalDisplay = document.getElementById("total-amount");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let buynow = JSON.parse(localStorage.getItem("buynow"));
+    let products = [];
+    let total = 0;
+
+    if (buynow) {
+        products = [buynow];
+        total = buynow.price * buynow.quantity;
+    } else if (cart.length > 0) {
+        products = cart;
+        total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    } else {
+        orderList.innerHTML = "<li>No items to checkout</li>";
+        totalDisplay.innerText = "";
+        return;
+    }
+
+    products.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.title} (x${item.quantity}) - BDT ${item.price * item.quantity}`;
+        orderList.appendChild(li);
+    });
+
+    totalDisplay.innerText = `Total: BDT ${total}`;
+});
+</script>
+@endpush
