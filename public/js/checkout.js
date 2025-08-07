@@ -22,23 +22,28 @@ document.getElementById('checkout-form').addEventListener('submit', async functi
         return;
     }
 
-    const response = await fetch("/place-order", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-        },
-        body: JSON.stringify({
-            name, email, phone, address, products, total
-        })
-    });
+    try {
+        const response = await fetch("/place-order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({
+                name, email, phone, address, products, total
+            })
+        });
 
-    const result = await response.json();
+        const result = await response.json();
 
-    alert(result.message);
+        alert(result.message);
 
-    // clear localStorage and redirect
-    localStorage.removeItem('cart');
-    localStorage.removeItem('buynow');
-    window.location.href = "/clothes";
+        // clear localStorage and redirect
+        localStorage.removeItem('cart');
+        localStorage.removeItem('buynow');
+        window.location.href = "/clothes";
+    } catch (err) {
+        console.error(err);
+        alert("Order failed!");
+    }
 });
