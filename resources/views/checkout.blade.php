@@ -71,5 +71,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
     totalDisplay.innerText = `Total: BDT ${total}`;
 });
+
+document.getElementById('checkout-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let buynow = JSON.parse(localStorage.getItem('buynow'));
+    let products = [];
+    let total = 0;
+
+    if (buynow) {
+        products = [buynow];
+        total = buynow.price * buynow.quantity;
+    } else if (cart.length > 0) {
+        products = cart;
+        total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    } else {
+        alert("No items to checkout.");
+        return;
+    }
+
+    try {
+        const response = await fetch("{{ route('place.order') }}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({
+                name, email, phone, address, products, total
+            })
+        });
+
+        const result = await response.json();
+
+        alert(result.message);
+
+        // Clear localStorage
+        localStorage.removeItem('cart');
+        localStorage.removeItem('buynow');
+
+        window.location.href = "/clothes";
+    } catch (err) {
+        console.error(err);
+        alert("Failed to place order. Try again later.");
+    }
+});
 </script>
 @endpush
