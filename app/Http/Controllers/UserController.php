@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-        $user = Auth::user();
+        $user = \App\Models\User::find(Auth::id());
 
         $request->validate([
             'name'    => 'required|string|max:255',
@@ -30,7 +30,8 @@ class UserController extends Controller
             'address' => 'nullable|string|max:255',
         ]);
 
-        $user->update($request->only('name', 'email', 'phone', 'address'));
+        $user->fill($request->only('name', 'email', 'phone', 'address'));
+        $user->save();
 
         return redirect()->route('user.profile')->with('success', 'Profile updated successfully!');
     }
