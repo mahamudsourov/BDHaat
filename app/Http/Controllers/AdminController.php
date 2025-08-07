@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Message;
@@ -28,7 +29,7 @@ class AdminController extends Controller
         }
         return redirect('/login');
     }
-    
+
     public function showUsers()
     {
         if (Auth::check() && Auth::user()->role === 'admin') {
@@ -39,14 +40,18 @@ class AdminController extends Controller
 
     public function deleteUser($id)
     {
-    $user = User::find($id);
+        $user = User::find($id);
 
-    if ($user && $user->role === 'user') {
-        $user->delete();
-        return redirect()->back()->with('success', 'User deleted successfully!');
+        if ($user && $user->role === 'user') {
+            $user->delete();
+            return redirect()->back()->with('success', 'User deleted successfully!');
+        }
+
+        return redirect()->back()->with('error', 'User not found or not deletable.');
     }
-
-    return redirect()->back()->with('error', 'User not found or not deletable.');
+    public function showOrders()
+    {
+        $orders = Order::with('user', 'orderItems.product', 'payment')->latest()->get();
+        return view('admin.order.orders', compact('orders'));
     }
-
 }

@@ -8,7 +8,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\OrderController;
 // Admin Controllers
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\ProductManagement\HealthyFoodController;
@@ -53,6 +53,17 @@ Route::get('/redirect', [RedirectController::class, 'handle'])->name('redirect')
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 Route::get('/user/profile/edit', [UserController::class, 'edit'])->name('user.profile.edit');
 Route::post('/user/profile/update', [UserController::class, 'update'])->name('user.profile.update');
+
+// ─────────────────────────────────────────────────────────────
+// 👤 ORDER Management
+// ─────────────────────────────────────────────────────────────
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+    Route::post('/place-order', [OrderController::class, 'placeOrder'])->name('place.order');
+});
+
+Route::get('/admin/orders', [AdminController::class, 'showOrders'])->name('admin.orders')->middleware('admin');
 
 // ─────────────────────────────────────────────────────────────
 // ✉️ CONTACT FORM SUBMIT
