@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2 class="mb-4 text-center">✏️ Edit Product</h2>
+    <h2 class="mb-4 text-center">Edit Product</h2>
 
     @if ($errors->any())
         <div class="alert alert-danger">

@@ -144,3 +144,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('healthyfoods/{id}', [HealthyFoodController::class, 'update'])->name('healthyfoods.update');
     Route::delete('healthyfoods/{id}', [HealthyFoodController::class, 'destroy'])->name('healthyfoods.destroy');
 });
+
+// Public-facing Healthy Foods page
+Route::get('/healthyfoods', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
+
