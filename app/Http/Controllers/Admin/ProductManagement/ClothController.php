@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Storage;
 
 class ClothController extends Controller
 {
+    public function frontendIndex()
+    {
+        $clothes = \App\Models\Cloth::all(); 
+        return view('clothes', compact('clothes'));
+    }
+    
     public function index()
     {
         $clothes = Cloth::orderBy('created_at', 'desc')->paginate(12);
