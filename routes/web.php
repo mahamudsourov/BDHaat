@@ -148,3 +148,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // Public-facing Healthy Foods page
 Route::get('/healthyfoods', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 
+
