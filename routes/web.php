@@ -148,4 +148,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // Public-facing Healthy Foods page
 Route::get('/healthyfoods', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 
-
+Route::resource('cloths', ClothController::class)->names([
+    'index' => 'cloths.index',
+    'create' => 'cloths.create',
+    'store' => 'cloths.store',
+    'show' => 'cloths.show',
+    'edit' => 'cloths.edit',
+    'update' => 'cloths.update',
+    'destroy' => 'cloths.destroy',
+]);
