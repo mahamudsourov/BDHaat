@@ -67,7 +67,57 @@
                 li.textContent = `${productName} (x${p.quantity}) - BDT ${p.price * p.quantity}`;
                 orderSummaryEl.appendChild(li);
             });
-
            
+            totalAmountEl.textContent = `Total: BDT ${total}`;
+
+            // Submit order handler
+            document.getElementById('checkout-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const address = document.getElementById('address').value.trim();
+
+                // Build order details string to send to backend
+                const orderDetails = products.map(p => {
+                    const productName = p.name ?? p.title ?? p.product_name ??
+                    'Unknown Product';
+                    return `${productName} (x${p.quantity}) - BDT ${p.price * p.quantity}`;
+                }).join('\n');
+
+                try {
+                    const response = await fetch("/place-order", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')
+                                .getAttribute('content'),
+                        },
+                        body: JSON.stringify({
+                            name,
+                            email,
+                            phone,
+                            address,
+                            order_details: orderDetails,
+                            total,
+                        }),
+                    });
+
+                    const result = await response.json();
+
+                    alert(result.message);
+
+                    // Clear localStorage and redirect
+                    localStorage.removeItem('cart');
+                    localStorage.removeItem('buynow');
+                    window.location.href = "/clothes";
+
+                } catch (err) {
+                    console.error(err);
+                    alert("Order failed!");
+                }
+            });
+        });
     </script>
 @endpush
