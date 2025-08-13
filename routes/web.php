@@ -63,7 +63,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/place-order', [OrderController::class, 'placeOrder'])->name('place.order');
 });
 
-Route::get('/admin/orders', [AdminController::class, 'showOrders'])->name('admin.orders')->middleware('admin');
+Route::get('/admin/orders', [AdminController::class, 'showOrders'])->name('admin.orders');
+
+
 
 // ─────────────────────────────────────────────────────────────
 // ✉️ CONTACT FORM SUBMIT

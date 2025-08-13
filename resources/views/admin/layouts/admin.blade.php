@@ -101,14 +101,15 @@
                 <i class="bi bi-person-lines-fill"></i> User Management
             </a>
             <a href="{{ route('product.management') }}"
-    class="{{ request()->routeIs('product.management') ? 'active' : '' }}">
-    <i class="bi bi-box-seam"></i> Product Management
-</a>
+                class="{{ request()->routeIs('product.management') ? 'active' : '' }}">
+                <i class="bi bi-box-seam"></i> Product Management
+            </a>
 
             </a>
-            <a href="#" class="{{ request()->routeIs('admin.orders.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.orders') }}" class="{{ request()->routeIs('admin.orders') ? 'active' : '' }}">
                 <i class="bi bi-cart-check"></i> Order Management
             </a>
+
             <a href="#" class="{{ request()->routeIs('admin.payments.*') ? 'active' : '' }}">
                 <i class="bi bi-credit-card-2-front"></i> Payments
             </a>
