@@ -41,86 +41,83 @@
 @endsection
 
 @push('scripts')
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const orderList = document.getElementById("order-summary");
-    const totalDisplay = document.getElementById("total-amount");
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let buyNow = JSON.parse(localStorage.getItem('buynow'));
+            let products = [];
+            let total = 0;
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let buynow = JSON.parse(localStorage.getItem("buynow"));
-    let products = [];
-    let total = 0;
+            if (buyNow) {
+                products = [buyNow];
+                total = buyNow.price * buyNow.quantity;
+            } else if (cart.length > 0) {
+                products = cart;
+                total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            }
 
-    if (buynow) {
-        products = [buynow];
-        total = buynow.price * buynow.quantity;
-    } else if (cart.length > 0) {
-        products = cart;
-        total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    } else {
-        orderList.innerHTML = "<li>No items to checkout</li>";
-        totalDisplay.innerText = "";
-        return;
-    }
+            // Show order summary in checkout page
+            const orderSummaryEl = document.getElementById('order-summary');
+            const totalAmountEl = document.getElementById('total-amount');
 
-    products.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = `${item.title} (x${item.quantity}) - BDT ${item.price * item.quantity}`;
-        orderList.appendChild(li);
-    });
+            products.forEach(p => {
+                // Try different keys for product name fallback
+                const productName = p.name ?? p.title ?? p.product_name ?? 'Unknown Product';
+                const li = document.createElement('li');
+                li.textContent = `${productName} (x${p.quantity}) - BDT ${p.price * p.quantity}`;
+                orderSummaryEl.appendChild(li);
+            });
+           
+            totalAmountEl.textContent = `Total: BDT ${total}`;
 
-    totalDisplay.innerText = `Total: BDT ${total}`;
-});
+            // Submit order handler
+            document.getElementById('checkout-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
 
-document.getElementById('checkout-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const address = document.getElementById('address').value.trim();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const address = document.getElementById('address').value.trim();
+                // Build order details string to send to backend
+                const orderDetails = products.map(p => {
+                    const productName = p.name ?? p.title ?? p.product_name ??
+                    'Unknown Product';
+                    return `${productName} (x${p.quantity}) - BDT ${p.price * p.quantity}`;
+                }).join('\n');
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let buynow = JSON.parse(localStorage.getItem('buynow'));
-    let products = [];
-    let total = 0;
+                try {
+                    const response = await fetch("/place-order", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')
+                                .getAttribute('content'),
+                        },
+                        body: JSON.stringify({
+                            name,
+                            email,
+                            phone,
+                            address,
+                            order_details: orderDetails,
+                            total,
+                        }),
+                    });
 
-    if (buynow) {
-        products = [buynow];
-        total = buynow.price * buynow.quantity;
-    } else if (cart.length > 0) {
-        products = cart;
-        total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    } else {
-        alert("No items to checkout.");
-        return;
-    }
+                    const result = await response.json();
 
-    try {
-        const response = await fetch("{{ route('place.order') }}", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            },
-            body: JSON.stringify({
-                name, email, phone, address, products, total
-            })
+                    alert(result.message);
+
+                    // Clear localStorage and redirect
+                    localStorage.removeItem('cart');
+                    localStorage.removeItem('buynow');
+                    window.location.href = "/clothes";
+
+                } catch (err) {
+                    console.error(err);
+                    alert("Order failed!");
+                }
+            });
         });
-
-        const result = await response.json();
-
-        alert(result.message);
-
-        // Clear localStorage
-        localStorage.removeItem('cart');
-        localStorage.removeItem('buynow');
-
-        window.location.href = "/clothes";
-    } catch (err) {
-        console.error(err);
-        alert("Failed to place order. Try again later.");
-    }
-});
-</script>
+    </script>
 @endpush

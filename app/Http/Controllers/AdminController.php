@@ -51,7 +51,7 @@ class AdminController extends Controller
     }
     public function showOrders()
     {
-        $orders = Order::with('user', 'orderItems.product', 'payment')->latest()->get();
-        return view('admin.order.orders', compact('orders'));
+        $orders = Order::with(['user', 'orderItems'])->orderBy('created_at', 'desc')->get();
+        return view('admin.order.order', compact('orders'));
     }
 }

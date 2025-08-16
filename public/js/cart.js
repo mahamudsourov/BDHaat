@@ -1,3 +1,9 @@
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById('cart-count').innerText = totalItems;
+}
+
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let tbody = document.querySelector('#cart-table tbody');
@@ -7,6 +13,7 @@ function loadCart() {
         tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Your cart is empty.</td></tr>';
         document.getElementById('checkout-btn').style.display = 'none';
         document.getElementById('total-price').innerText = '';
+        updateCartCount();
         return;
     }
 
@@ -18,7 +25,7 @@ function loadCart() {
 
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><img src="${IMAGE_PATH}/${item.image}" alt="${item.title}" class="product-img"></td>
+            <td><img src="/storage/${item.image}" alt="${item.title}" class="product-img" style="width:50px;height:50px;"></td>
             <td>${item.brand}</td>
             <td>${item.title}</td>
             <td>BDT ${item.price}</td>
@@ -33,8 +40,8 @@ function loadCart() {
 
     document.getElementById('total-price').innerText = 'Total: BDT ' + totalPrice;
     document.getElementById('checkout-btn').style.display = 'inline-block';
+    updateCartCount(); // ✅ Keep navbar count in sync
 }
-
 
 function updateQuantity(index, newQuantity) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -57,5 +64,3 @@ function removeItem(index) {
 }
 
 window.onload = loadCart;
-
-
