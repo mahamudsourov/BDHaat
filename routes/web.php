@@ -145,8 +145,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('healthyfoods/{id}', [HealthyFoodController::class, 'destroy'])->name('healthyfoods.destroy');
 });
 
-// Public-facing Healthy Foods page
-Route::get('/healthyfoods', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
-
-// Public-facing cloths page
+Route::get('/food', [FoodController::class, 'showFrontendFoods'])->name('food');
+Route::get('/healthy_food', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 Route::get('/clothes', [ClothController::class, 'frontendIndex'])->name('clothes');
