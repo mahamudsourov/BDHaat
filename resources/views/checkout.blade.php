@@ -119,5 +119,6 @@
                 }
             });
         });
+        // fixed
     </script>
 @endpush
