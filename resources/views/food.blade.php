@@ -1,4 +1,3 @@
-
 @extends('index')
 
 @section('title', 'Foods')
