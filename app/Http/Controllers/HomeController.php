@@ -6,7 +6,6 @@ use App\Models\Cloth;
 use App\Models\Food;
 use App\Models\HealthyFood;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 
 class HomeController extends Controller
 {
@@ -17,14 +16,22 @@ class HomeController extends Controller
         $foods = Food::latest()->take(3)->get();
         $healthyFoods = HealthyFood::latest()->take(3)->get();
 
-        // Merge them into one collection
+        // Merge them into one collection for New Arrivals
         $newArrivals = collect()
             ->merge($clothes)
             ->merge($foods)
             ->merge($healthyFoods)
             ->sortByDesc('created_at')
-            ->take(8); // Limit to 8 newest arrivals
+            ->take(8);
 
-        return view('home', compact('newArrivals'));
+        // Trending: Merge all & sort by price
+        $trending = collect()
+            ->merge($clothes)
+            ->merge($foods)
+            ->merge($healthyFoods)
+            ->sortByDesc('price')
+            ->take(8); // Top 8 most expensive
+
+        return view('home', compact('newArrivals', 'trending'));
     }
 }

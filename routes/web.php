@@ -9,11 +9,13 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\HomeController;
 // Admin Controllers
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\ProductManagement\HealthyFoodController;
 use App\Http\Controllers\Admin\ProductManagement\ClothController;
 use App\Http\Controllers\Admin\ProductManagement\FoodController;
+
 
 
 
@@ -151,7 +153,5 @@ Route::get('/food', [FoodController::class, 'showFrontendFoods'])->name('food');
 Route::get('/healthy_food', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 Route::get('/clothes', [ClothController::class, 'frontendIndex'])->name('clothes');
 
-
-use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 

@@ -159,6 +159,7 @@ body {
 .feature-box p {
     font-size: 0.95rem;
     line-height: 1.5;
+    color: #caceca;
 }
 
 /* Trending product */
