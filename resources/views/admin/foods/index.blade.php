@@ -2,7 +2,19 @@
 @section('content')
 <div class="container">
     <h2>Foods Management</h2>
-    <a href="{{ route('admin.foods.create') }}" class="btn btn-primary mb-3">Add Food</a>
+
+    <div class="d-flex justify-content-between mb-3">
+        {{-- Back Button --}}
+        <a href="{{ url()->previous() }}" class="btn btn-secondary">
+            ⬅ Back
+        </a>
+
+        {{-- Add Food Button --}}
+        <a href="{{ route('admin.foods.create') }}" class="btn btn-success">
+            ➕ Add Food
+        </a>
+    </div>
+
     <table class="table table-bordered">
         <thead>
             <tr>

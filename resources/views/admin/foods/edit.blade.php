@@ -1,7 +1,11 @@
 @extends('admin.layouts.admin')
 @section('content')
 <div class="container">
-    <h2>Edit Food</h2>
+    <h2 class="text-center mb-3">Edit Food</h2>
+    {{-- Back Button --}}
+        <a href="{{ url()->previous() }}" class="btn btn-secondary">
+            ⬅ Back
+        </a>
     <form action="{{ route('admin.foods.update', $food->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
         <div class="mb-3">

@@ -10,12 +10,18 @@
                 {{ session('success') }}
             </div>
         @endif
+        <div class="d-flex justify-content-between mb-3">
+            {{-- Back Button --}}
+            <a href="{{ url()->previous() }}" class="btn btn-secondary">
+                ⬅ Back
+            </a>
 
-        <div class="text-end mb-3">
+            {{-- Add New Product Button --}}
             <a href="{{ route('admin.healthyfoods.create') }}" class="btn btn-success">
                 ➕ Add New Product
             </a>
         </div>
+
 
         <div class="table-responsive">
             <table class="table table-bordered align-middle text-center">
@@ -54,7 +60,7 @@
                                     <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                 </form>
                             </td>
-                            
+
                         </tr>
                     @empty
                         <tr>

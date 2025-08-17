@@ -15,6 +15,12 @@
             </ul>
         </div>
     @endif
+    
+    {{--  back Button --}}
+    <a href="{{ url()->previous() }}" class="btn btn-secondary">
+    ⬅ Back
+    </a>
+
 
     <form action="{{ route('admin.healthyfoods.update', $food->id) }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
         @csrf

@@ -9,7 +9,12 @@
         <div class="alert alert-success text-center">{{ session('success') }}</div>
     @endif
 
-    <div class="text-end mb-3">
+    <div class="d-flex justify-content-between mb-3">
+            {{-- Back Button --}}
+            <a href="{{ url()->previous() }}" class="btn btn-secondary">
+                ⬅ Back
+            </a>
+            {{-- Add New Product Button --}}
         <a href="{{ route('admin.cloths.create') }}" class="btn btn-success">➕ Add New Product</a>
     </div>
 

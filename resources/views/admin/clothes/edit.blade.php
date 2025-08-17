@@ -4,6 +4,10 @@
 @section('content')
 <div class="container mt-4" style="max-width:900px;">
     <h2 class="mb-4 text-center"><b>Edit Clothing Item</b></h2>
+    {{-- Back Button --}}
+        <a href="{{ url()->previous() }}" class="btn btn-secondary">
+            ⬅ Back
+        </a>
 
     @if ($errors->any())
         <div class="alert alert-danger">
