@@ -150,3 +150,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::get('/food', [FoodController::class, 'showFrontendFoods'])->name('food');
 Route::get('/healthy_food', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 Route::get('/clothes', [ClothController::class, 'frontendIndex'])->name('clothes');
+
+
+use App\Http\Controllers\HomeController;
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
