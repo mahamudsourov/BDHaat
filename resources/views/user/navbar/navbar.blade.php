@@ -65,7 +65,7 @@
                 </li>
             @else
                 <li><a href="{{ route('login') }}" id="openLoginBtn">Login</a></li>
-                <li><a href="#" id="openRegisterBtn">Sign Up</a></li>
+                <li><a href="{{ route('register') }}" id="openRegisterBtn">Sign Up</a></li>
             @endif
 
             <li>
