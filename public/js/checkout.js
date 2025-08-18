@@ -12,6 +12,57 @@ document.addEventListener("DOMContentLoaded", function () {
         total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     }
 
+    // Show order summary in checkout page
+    const orderSummaryEl = document.getElementById("order-summary");
+    const totalAmountEl = document.getElementById("total-amount");
+
+    products.forEach((p) => {
+        const productName =
+            p.name ?? p.title ?? p.product_name ?? "Unknown Product";
+        const li = document.createElement("li");
+        li.textContent = `${productName} (x${p.quantity}) - BDT ${
+            p.price * p.quantity
+        }`;
+        orderSummaryEl.appendChild(li);
+    });
+
+    totalAmountEl.textContent = `Total: BDT ${total}`;
+
+    // ✅ Message Box function
+    function showMessage(msg, type = "success") {
+        let box = document.getElementById("checkout-message-box");
+
+        if (!box) {
+            box = document.createElement("div");
+            box.id = "checkout-message-box";
+            box.style.position = "fixed";
+            box.style.top = "20px";
+            box.style.right = "20px";
+            box.style.padding = "10px 20px";
+            box.style.borderRadius = "5px";
+            box.style.color = "#fff";
+            box.style.zIndex = "9999";
+            box.style.display = "none";
+            document.body.appendChild(box);
+        }
+
+        box.innerText = msg;
+
+        if (type === "success") {
+            box.style.background = "#28a745"; // green
+        } else if (type === "error") {
+            box.style.background = "#dc3545"; // red
+        } else {
+            box.style.background = "#007bff"; // info/blue
+        }
+
+        box.style.display = "block";
+
+        setTimeout(() => {
+            box.style.display = "none";
+        }, 3000);
+    }
+
     // Submit order handler
     document
         .getElementById("checkout-form")
