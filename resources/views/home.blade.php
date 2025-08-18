@@ -11,7 +11,7 @@
     <section id="hero">
         <h1>Easy way to Shop</h1>
         <h1>Choose your Products</h1>
-        <p>Save more with coupons & up to 60% off!</p>
+        <p class="hero-subtitle">Save more with coupons & up to 60% off!</p>
     </section>
     <!-- Why Shop -->
 

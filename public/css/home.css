@@ -74,8 +74,9 @@ body {
 /* Banner Start */
 
 #hero {
-    background-image: url("/images/hero2.png");
-    height: 120vh;
+    position: relative; /* Overlay use korar jonno */
+    background-image: url("/images/hero3.jpg");
+    height: 90vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
@@ -86,14 +87,36 @@ body {
     justify-content: center;
 }
 
+/* Overlay for opacity */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 0.4 = 40% opacity */
+    z-index: 1;
+}
+
+/* Hero content should be above overlay */
+#hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 #hero h4 {
     padding-bottom: 15px;
 }
 
 #hero h1 {
-    color: #088178;
+    color: #fdfdfd;
 }
-
+.hero-subtitle {
+    color: #fdfdfd;
+}
 /* why shop */
 
 .why-shop {

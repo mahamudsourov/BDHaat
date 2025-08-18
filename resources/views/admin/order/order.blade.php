@@ -1,9 +1,13 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'Order Management')
+@section('title',)
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/order_admin.css') }}">
+@endpush
 
 @section('content')
-<h1>Order Management</h1>
+<h1 class="page-heading">Order Management</h1>
+
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped">

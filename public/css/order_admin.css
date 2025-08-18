@@ -1,0 +1,129 @@
+/* ===== Order Management Table ===== */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    font-size: 14px;
+}
+
+.table thead {
+    background: #1e293b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+
+}
+
+.table thead th {
+    border: none !important;
+    padding: 14px 16px;
+}
+
+.table tbody tr {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+}
+
+.table tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    background: #f9fafb;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 14px 16px;
+    border: none !important;
+}
+
+/* ===== Status Dropdown ===== */
+.table select.form-select {
+    border-radius: 20px;
+    font-size: 13px;
+    padding: 6px 14px;
+    min-width: 160px;
+    display: inline-block;
+    margin-right: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #f8fafc;
+    transition: 0.2s;
+}
+
+.table select.form-select:hover {
+    border-color: #6366f1;
+}
+
+/* ===== Delete Button ===== */
+.table .btn-danger.btn-sm {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+    background: #ef4444;
+    border: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.table .btn-danger.btn-sm:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+/* ===== Status & Payment Badges ===== */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge-pending {
+    background: #fbbf24;
+    color: #fff;
+}
+
+.badge-confirmed {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.badge-out_for_delivery {
+    background: #6366f1;
+    color: #fff;
+}
+
+.badge-delivered {
+    background: #10b981;
+    color: #fff;
+}
+
+.badge-success {
+    background: #22c55e;
+    color: #fff;
+}
+
+.badge-warning {
+    background: #f97316;
+    color: #fff;
+}
+
+.badge-danger {
+    background: #ef4444;
+    color: #fff;
+}
+/* ===== Page Heading ===== */
+.page-heading {
+    text-align: center;
+    background: #1e293b; /* dark slate */
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
+}

@@ -30,11 +30,11 @@
 
         <h3>Frequently Asked Questions</h3>
         <ul>
-            <li><strong>How do I place an order?</strong> – Visit our products page and click “Add to Cart”.</li>
-            <li><strong>How can I track my order?</strong> – Go to your dashboard and check “Order Status”.</li>
+            <li><strong>How do I place an order?</strong> – Visit our products page and click “Add to Cart or Buy Now”.</li>
+            <li><strong>How can I track my order?</strong> – Go to your Profile and check “View Orders”.</li>
             <li><strong>How do I request a return or refund?</strong> – Read our Return & Refund Policy and apply via “My
                 Orders”.</li>
-            <li><strong>How do I update my profile?</strong> – Go to your “Account Settings”.</li>
+            <li><strong>How do I update my profile?</strong> – Go to your “Profile then click on Edit Profile”.</li>
         </ul>
 
         <div class="contact">

@@ -1,6 +1,9 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'User Management')
+@section('title')
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+@endpush
 
 @section('content')
 <div class="card">
