@@ -55,6 +55,9 @@ Route::get('/redirect', [RedirectController::class, 'handle'])->name('redirect')
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 Route::get('/user/profile/edit', [UserController::class, 'edit'])->name('user.profile.edit');
 Route::post('/user/profile/update', [UserController::class, 'update'])->name('user.profile.update');
+// User Profile Orders
+Route::get('/user/orders', [App\Http\Controllers\UserController::class, 'orders'])->name('user.orders');
+
 
 // ─────────────────────────────────────────────────────────────
 // 👤 ORDER Management

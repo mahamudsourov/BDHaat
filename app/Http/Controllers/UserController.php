@@ -1,9 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Order;
+
 
 class UserController extends Controller
 {
@@ -35,5 +36,11 @@ class UserController extends Controller
 
         return redirect()->route('user.profile')->with('success', 'Profile updated successfully!');
     }
-}
 
+    public function orders()
+    {
+        $user   = Auth::user();
+        $orders = Order::where('user_id', $user->id)->latest()->get();
+        return view('user.orders', compact('orders', 'user'));
+    }
+}

@@ -57,6 +57,7 @@
     background-color: #218838;
 }
 
+
 /* ===== EDIT PROFILE FORM STYLING START ===== */
 
 .profile-body label {
@@ -146,5 +147,52 @@
     }
     .profile-header {
         font-size: 20px;
+    }
+}
+
+
+/* ===== VIEW ORDERS SECTION ===== */
+
+.view-orders-section {
+    max-width: 800px;
+    margin: 20px auto 60px auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.orders-heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+.btn-orders {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-orders:hover {
+    background-color: #0056b3;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    .view-orders-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-orders {
+        width: 100%;
+        text-align: center;
     }
 }

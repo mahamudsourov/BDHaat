@@ -7,25 +7,32 @@
 @endpush
 
 @section('content')
-<div class="profile-container">
-    <div class="profile-header">My Profile</div>
+    <div class="profile-container">
+        <div class="profile-header">My Profile</div>
 
-    <div class="profile-body">
-        @if(session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
+        <div class="profile-body">
+            @if (session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
 
-        <p><strong>Name:</strong> {{ $user->name }}</p>
-        <p><strong>Email:</strong> {{ $user->email }}</p>
-        <p><strong>Phone:</strong> {{ $user->phone ?? 'Not Provided' }}</p>
-        <p><strong>Address:</strong> {{ $user->address ?? 'Not Provided' }}</p>
+            <p><strong>Name:</strong> {{ $user->name }}</p>
+            <p><strong>Email:</strong> {{ $user->email }}</p>
+            <p><strong>Phone:</strong> {{ $user->phone ?? 'Not Provided' }}</p>
+            <p><strong>Address:</strong> {{ $user->address ?? 'Not Provided' }}</p>
+        </div>
     </div>
-</div>
 
-<div class="edit-profile-section">
-    <h4 class="edit-heading">Want to update your profile?</h4>
-    <div class="edit-btn-wrapper">
-        <a href="{{ route('user.profile.edit') }}" class="btn-edit">Edit Profile</a>
+    <div class="edit-profile-section">
+        <h4 class="edit-heading">Want to update your profile?</h4>
+        <div class="edit-btn-wrapper">
+            <a href="{{ route('user.profile.edit') }}" class="btn-edit">Edit Profile</a>
+        </div>
     </div>
-</div>
+
+    <div class="view-orders-section">
+        <h4 class="orders-heading">Want to show your Orders?</h4>
+        <div class="edit-btn-wrapper">
+            <a href="{{ route('user.orders') }}" class="btn-orders">View Orders</a>
+        </div>
+    </div>
 @endsection
