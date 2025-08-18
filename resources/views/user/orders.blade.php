@@ -3,61 +3,20 @@
 @section('title', 'My Orders')
 
 @push('styles')
-    <style>
-    
-        .orders-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .orders-container h3 {
-            margin-bottom: 25px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #0a5e58;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        table th, table td {
-            padding: 12px 15px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #007bff;
-            color: #fff;
-            font-weight: 500;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        table tr:hover {
-            background-color: #e9ecef;
-        }
-
-        @media (max-width: 768px) {
-            table th, table td {
-                padding: 10px;
-            }
-        }
-      
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/order_user.css') }}">
 @endpush
 
 @section('content')
 <div class="orders-container">
     <h3>Your Orders</h3>
+
+    <!-- Flash Message -->
+    @if(session('success'))
+        <div class="flash-message flash-success" id="flashMessage">{{ session('success') }}</div>
+    @endif
+    @if(session('error'))
+        <div class="flash-message flash-error" id="flashMessage">{{ session('error') }}</div>
+    @endif
 
     @if($orders->isEmpty())
         <p>No orders found.</p>
@@ -73,6 +32,7 @@
                         <th>Status</th>
                         <th>Payment Status</th>
                         <th>Placed At</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,6 +45,9 @@
                             <td>{{ ucfirst($order->status) }}</td>
                             <td>{{ ucfirst($order->payment_status ?? 'unpaid') }}</td>
                             <td>{{ $order->created_at->format('d M Y, h:i A') }}</td>
+                            <td>
+                                <button class="cancel-btn" onclick="openModal({{ $order->id }})">Cancel</button>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -92,4 +55,21 @@
         </div>
     @endif
 </div>
+
+<!-- Modal -->
+<div id="cancelModal" class="modal">
+    <div class="modal-content">
+        <h4>Are you sure you want to cancel this order?</h4>
+        <form id="cancelForm" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="confirm-btn">Yes, Cancel</button>
+            <button type="button" class="cancel-btn-modal" onclick="closeModal()">No</button>
+        </form>
+    </div>
+</div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/order_user.js') }}"></script>
+@endpush

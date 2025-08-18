@@ -43,4 +43,21 @@ class UserController extends Controller
         $orders = Order::where('user_id', $user->id)->latest()->get();
         return view('user.orders', compact('orders', 'user'));
     }
+
+    public function cancelOrder($orderId)
+    {
+        $user = Auth::user();
+
+        $order = Order::where('id', $orderId)
+                      ->where('user_id', $user->id)
+                      ->first();
+
+        if (!$order) {
+            return redirect()->back()->with('error', 'Order not found or cannot cancel.');
+        }
+
+        $order->delete();
+
+        return redirect()->back()->with('success', 'Order cancelled successfully!');
+    }
 }
