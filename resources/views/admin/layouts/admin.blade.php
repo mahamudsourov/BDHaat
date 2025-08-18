@@ -110,7 +110,7 @@
                 <i class="bi bi-cart-check"></i> Order Management
             </a>
 
-            <a href="#" class="{{ request()->routeIs('admin.payments.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.payments') }}" class="{{ request()->routeIs('admin.payments.*') ? 'active' : '' }}">
                 <i class="bi bi-credit-card-2-front"></i> Payments
             </a>
             <a href="{{ route('admin.messages') }}"

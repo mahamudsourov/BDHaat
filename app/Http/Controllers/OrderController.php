@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -12,19 +13,21 @@ class OrderController extends Controller
 {
     public function checkout()
     {
-        return view('checkout'); 
+        return view('checkout');
     }
 
     public function placeOrder(Request $request)
     {
         $request->validate([
-            'name'          => 'required|string|max:255',
-            'email'         => 'required|email',
-            'phone'         => 'required|string',
-            'address'       => 'required|string',
-            'order_details' => 'required|string',  
-            'total'         => 'required|numeric',
+            'name'           => 'required|string|max:255',
+            'email'          => 'required|email',
+            'phone'          => 'required|string',
+            'address'        => 'required|string',
+            'order_details'  => 'required|string',
+            'total'          => 'required|numeric',
+            'payment_method' => 'required|string|in:COD,Bkash,Nagad',
         ]);
+
 
         $user = Auth::user();
         if (!$user) {
@@ -40,15 +43,16 @@ class OrderController extends Controller
                 'address'       => $request->address,
                 'order_details' => $request->order_details,
                 'status'        => 'pending',
-                'payment_status'=> 'unpaid',
+                'payment_status' => 'unpaid',
             ]);
 
             Payment::create([
-                'order_id'   => $order->id,
-                'method'     => 'COD',  
-                'amount'     => $request->total,
-                'status'     => 'pending',
+                'order_id' => $order->id,
+                'method'   => $request->payment_method,  // ✅ save chosen method
+                'amount'   => $request->total,
+                'status'   => $request->payment_method === 'COD' ? 'pending' : 'success',
             ]);
+
 
             DB::commit();
 

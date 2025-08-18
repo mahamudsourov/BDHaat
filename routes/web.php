@@ -100,6 +100,10 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.ProductManagement.index');
     })->name('product.management');
 
+    //Ad -- payments
+    Route::get('/admin/payments', [AdminController::class, 'payments'])->name('admin.payments');
+
+
     // 🧮 Grouped Product Management (Healthy Foods, Cloths, Foods)
     Route::prefix('admin/ProductManagement')->name('admin.')->group(function () {
 

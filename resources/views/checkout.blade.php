@@ -30,6 +30,13 @@
             <label for="address">Address:</label>
             <textarea id="address" rows="4" required></textarea>
 
+            <label for="payment_method">Payment Method:</label>
+            <select id="payment_method" required>
+                <option value="COD">Cash on Delivery</option>
+                <option value="Bkash">Bkash</option>
+                <option value="Nagad">Nagad</option>
+            </select>
+
             <h3>Order Summary</h3>
             <ul id="order-summary"></ul>
             <p id="total-amount" style="font-weight:bold;"></p>
@@ -61,13 +68,12 @@
             const totalAmountEl = document.getElementById('total-amount');
 
             products.forEach(p => {
-                // Try different keys for product name fallback
                 const productName = p.name ?? p.title ?? p.product_name ?? 'Unknown Product';
                 const li = document.createElement('li');
                 li.textContent = `${productName} (x${p.quantity}) - BDT ${p.price * p.quantity}`;
                 orderSummaryEl.appendChild(li);
             });
-           
+
             totalAmountEl.textContent = `Total: BDT ${total}`;
 
             // Submit order handler
@@ -78,6 +84,7 @@
                 const email = document.getElementById('email').value.trim();
                 const phone = document.getElementById('phone').value.trim();
                 const address = document.getElementById('address').value.trim();
+                const payment_method = document.getElementById('payment_method').value; // ✅ new
 
                 // Build order details string to send to backend
                 const orderDetails = products.map(p => {
@@ -101,6 +108,7 @@
                             address,
                             order_details: orderDetails,
                             total,
+                            payment_method, // ✅ send to backend
                         }),
                     });
 
@@ -119,6 +127,7 @@
                 }
             });
         });
+
         // fixed
     </script>
 @endpush
