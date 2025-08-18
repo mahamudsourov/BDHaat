@@ -49,8 +49,6 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('helpcenter') }}">Help Center</a></li>
                     <li><a href="{{ route('customercare') }}">Contact Customer Care</a></li>
-                    <li><a href="{{ route('order') }}">Order</a></li>
-                    <li><a href="{{ route('payment') }}">Payment</a></li>
                     <li><a href="{{ route('returnrefund') }}">Return & Refunds</a></li>
                 </ul>
             </li>
