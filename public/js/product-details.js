@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('title').innerText = product.title;
         document.getElementById('price').innerText = "BDT " + product.price;
     } else {
-        alert('No product selected');
+        showMessage('No product selected', 'error');
         window.location.href = "/clothes";
     }
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function addToCart() {
     const quantity = parseInt(document.getElementById('quantity').value);
     if (quantity < 1) {
-        alert('Quantity cannot be less than 1');
+        showMessage('Quantity cannot be less than 1', 'error');
         return;
     }
 
@@ -33,7 +33,7 @@ function addToCart() {
     const product = JSON.parse(localStorage.getItem('selectedProduct'));
 
     if (!product) {
-        alert('No product selected');
+        showMessage('No product selected', 'error');
         return;
     }
 
@@ -49,7 +49,7 @@ function addToCart() {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount(); // ✅ Update navbar count immediately
-    alert('Added to cart!');
+    showMessage('✅ Added to cart!', 'success');
 }
 
 function buyNow() {
@@ -65,5 +65,7 @@ function buyNow() {
         quantity: quantity
     }));
 
-    window.location.href = "/checkout";
+    setTimeout(() => {
+        window.location.href = "/checkout";
+    }, 1000);
 }

@@ -162,3 +162,10 @@ Route::get('/clothes', [ClothController::class, 'frontendIndex'])->name('clothes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+//Delivered Status
+Route::prefix('admin')->group(function () {
+    Route::put('/orders/{id}', [App\Http\Controllers\AdminController::class, 'updateOrder'])->name('admin.orders.update');
+    Route::delete('/orders/{id}', [App\Http\Controllers\AdminController::class, 'deleteOrder'])->name('admin.orders.delete');
+});
+
+
