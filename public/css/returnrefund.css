@@ -1,100 +1,115 @@
+returnrefund.css
+
+/* General Container */
 .return-container {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeSlideIn 1s ease-out forwards;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@keyframes fadeSlideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h2 {
-    font-weight: 600;
-    color: #0d6efd;
-}
-
-h4 {
-    margin-top: 30px;
-    color: #333;
-    font-weight: 500;
-}
-
-.list-group-item {
-    border: none;
-    background: transparent;
-    padding-left: 0;
-    font-size: 16px;
+/* Heading */
+.return-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #088178;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease forwards;
+    justify-content: center;
+    gap: 10px;
 }
 
-.list-group-item:nth-child(1) { animation-delay: 0.2s; }
-.list-group-item:nth-child(2) { animation-delay: 0.4s; }
-.list-group-item:nth-child(3) { animation-delay: 0.6s; }
-
-@keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Intro text */
+.return-container p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
 }
 
-.list-group-item i {
-    color: #0d6efd;
-    margin-right: 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.list-group-item:hover i {
-    transform: scale(1.2);
-    color: #6610f2;
-}
-
-p, li {
-    color: #444;
-}
-
-a {
-    color: #0d6efd;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #6610f2;
-}
+/* Accordion */
 .accordion-button {
-    font-weight: 500;
-    font-size: 1rem;
-    background-color: #f0f8ff;
-    color: #0d6efd;
-}
-.accordion-button:not(.collapsed) {
-    background-color: #e0e8ff;
-    color: #6610f2;
-}
-.accordion-body {
-    background-color: #ffffff;
+    background-color: #f7fafa;
+    color: #088178;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s all ease-in-out;
 }
 
+.accordion-button:hover {
+    background-color: #e0f2f1;
+    color: #00695c;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* List items in accordion */
+.accordion-body ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.accordion-body ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.accordion-body ul li i {
+    color: #088178;
+    font-size: 16px;
+}
+
+/* Links inside accordion */
+.accordion-body a {
+    color: #088178;
+    text-decoration: underline;
+}
+
+.accordion-body a:hover {
+    color: #00695c;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .return-container {
-        margin: 30px 15px;
         padding: 20px;
+        margin: 20px 15px;
+    }
+
+    .return-container h2 {
+        font-size: 24px;
+    }
+
+    .accordion-button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .accordion-body ul li {
+        font-size: 14px;
     }
 }
