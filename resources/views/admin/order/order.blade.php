@@ -47,6 +47,7 @@
                             </option>
                             <option value="delivered" {{ $order->status == 'delivered' ? 'selected' : '' }}>Delivered
                             </option>
+                             <option value="cancelled" {{ $order->status == 'cancelled' ? 'selected' : '' }}>Cancelled</option> 
                         </select>
                     </form>
 

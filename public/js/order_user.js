@@ -2,29 +2,29 @@
 function openModal(orderId) {
     const modal = document.getElementById('cancelModal');
     const form = document.getElementById('cancelForm');
-    form.action = `/user/orders/${orderId}`;
+    form.action = `/user/orders/${orderId}`; // route('user.orders.cancel')
     modal.style.display = 'block';
 }
 
 function closeModal() {
-    document.getElementById('cancelModal').style.display = 'none';
+    const modal = document.getElementById('cancelModal');
+    modal.style.display = 'none';
 }
 
 // Close modal on outside click
-window.onclick = function(event) {
+window.addEventListener('click', function(e) {
     const modal = document.getElementById('cancelModal');
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (e.target === modal) {
+        modal.style.display = 'none';
     }
-}
+});
 
-// ===== FLASH MESSAGE =====
-window.onload = function() {
+// ===== FLASH MESSAGE AUTO HIDE (4s) =====
+window.addEventListener('load', function() {
     const flash = document.getElementById('flashMessage');
     if (flash) {
-        flash.style.display = 'block';
         setTimeout(() => {
             flash.style.display = 'none';
-        }, 2000); // 2 seconds
+        }, 4000);
     }
-}
+});

@@ -10,12 +10,11 @@
 <div class="orders-container">
     <h3>Your Orders</h3>
 
-    <!-- Flash Message -->
     @if(session('success'))
-        <div class="flash-message flash-success" id="flashMessage">{{ session('success') }}</div>
+        <div class="alert alert-success" id="flashMessage">{{ session('success') }}</div>
     @endif
     @if(session('error'))
-        <div class="flash-message flash-error" id="flashMessage">{{ session('error') }}</div>
+        <div class="alert alert-danger" id="flashMessage">{{ session('error') }}</div>
     @endif
 
     @if($orders->isEmpty())
@@ -42,11 +41,21 @@
                             <td>BDT {{ number_format($order->total_price, 2) }}</td>
                             <td>{{ $order->address }}</td>
                             <td>{{ $order->order_details }}</td>
-                            <td>{{ ucfirst($order->status) }}</td>
+                            <td>
+                                <span class="status-badge status-{{ $order->status }}">
+                                    {{ str_replace('_',' ', $order->status) }}
+                                </span>
+                            </td>
                             <td>{{ ucfirst($order->payment_status ?? 'unpaid') }}</td>
                             <td>{{ $order->created_at->format('d M Y, h:i A') }}</td>
                             <td>
-                                <button class="cancel-btn" onclick="openModal({{ $order->id }})">Cancel</button>
+                                @if(in_array($order->status, ['pending','confirmed']))
+                                    <button class="cancel-btn" onclick="openModal({{ $order->id }})">
+                                        Cancel
+                                    </button>
+                                @else
+                                    —
+                                @endif
                             </td>
                         </tr>
                     @endforeach
@@ -56,7 +65,7 @@
     @endif
 </div>
 
-<!-- Modal -->
+<!-- Confirm Modal -->
 <div id="cancelModal" class="modal">
     <div class="modal-content">
         <h4>Are you sure you want to cancel this order?</h4>
@@ -68,8 +77,8 @@
         </form>
     </div>
 </div>
-@endsection
 
 @push('scripts')
     <script src="{{ asset('js/order_user.js') }}"></script>
 @endpush
+@endsection

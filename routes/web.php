@@ -72,8 +72,9 @@ Route::get('/admin/orders', [AdminController::class, 'showOrders'])->name('admin
 Route::get('/user/orders', [UserController::class, 'orders'])->name('user.orders');
 Route::delete('/user/orders/{order}', [UserController::class, 'cancelOrder'])->name('user.orders.cancel');
 
-
-
+Route::delete('/user/orders/{id}', [UserController::class, 'cancelOrder'])
+     ->name('user.orders.cancel')
+     ->middleware('auth');
 
 // ─────────────────────────────────────────────────────────────
 // ✉️ CONTACT FORM SUBMIT

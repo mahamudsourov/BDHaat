@@ -1,10 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Order;
-
 
 class UserController extends Controller
 {
@@ -44,20 +43,23 @@ class UserController extends Controller
         return view('user.orders', compact('orders', 'user'));
     }
 
-    public function cancelOrder($orderId)
+    public function cancelOrder($id)
     {
         $user = Auth::user();
 
-        $order = Order::where('id', $orderId)
-                      ->where('user_id', $user->id)
-                      ->first();
+        $order = \App\Models\Order::where('id', $id)
+            ->where('user_id', $user->id) // অন্যের অর্ডার cancel না হয়
+            ->firstOrFail();
 
-        if (!$order) {
-            return redirect()->back()->with('error', 'Order not found or cannot cancel.');
+        // শুধু pending/confirmed হলে cancel করতে দিবে
+        if (! in_array($order->status, ['pending', 'confirmed'])) {
+            return back()->with('error', 'This order cannot be cancelled.');
         }
 
-        $order->delete();
+        $order->status = 'cancelled';
+        $order->save();
 
-        return redirect()->back()->with('success', 'Order cancelled successfully!');
+        return back()->with('success', 'Order cancelled successfully!');
     }
+
 }
