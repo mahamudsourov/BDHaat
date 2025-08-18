@@ -44,5 +44,67 @@
     </div>
 </div>
 
+<!-- Dynamic Confirmation Box -->
+<div id="confirm-box" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+">
+    <div style="
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+    ">
+        <p id="confirm-message" style="margin-bottom: 20px; font-size: 16px;">Are you sure?</p>
+        <button id="confirm-yes" class="btn btn-danger me-2">Yes</button>
+        <button id="confirm-no" class="btn btn-secondary">No</button>
+    </div>
+</div>
 
+<script>
+window.addEventListener('load', function () {
+    const confirmBox = document.getElementById('confirm-box');
+    const confirmMessage = document.getElementById('confirm-message');
+    const confirmYes = document.getElementById('confirm-yes');
+    const confirmNo = document.getElementById('confirm-no');
+
+    let formToSubmit = null;
+
+    // Attach event to all delete forms
+    document.querySelectorAll('.delete-user-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop default submit
+            formToSubmit = this;
+
+            // Show dynamic confirmation
+            confirmMessage.innerText = 'Are you sure you want to delete this user?';
+            confirmBox.style.display = 'flex';
+        });
+    });
+
+    // Cancel delete
+    confirmNo.addEventListener('click', function() {
+        formToSubmit = null;
+        confirmBox.style.display = 'none';
+    });
+
+    // Confirm delete
+    confirmYes.addEventListener('click', function() {
+        if(formToSubmit) {
+            formToSubmit.submit(); // Original form submit
+        }
+        confirmBox.style.display = 'none';
+    });
+});
+</script>
 @endsection
