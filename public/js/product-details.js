@@ -5,6 +5,45 @@ function updateCartCount() {
     document.getElementById('cart-count').innerText = totalItems;
 }
 
+
+// ✅ Dynamic Message Function
+function showMessage(msg, type = 'success') {
+    let box = document.getElementById('message-box');
+
+    // যদি না থাকে, create করে body তে append করব
+    if (!box) {
+        box = document.createElement('div');
+        box.id = 'message-box';
+        box.style.position = 'fixed';
+        box.style.top = '20px';
+        box.style.right = '20px';
+        box.style.padding = '10px 20px';
+        box.style.borderRadius = '5px';
+        box.style.color = '#fff';
+        box.style.zIndex = '9999';
+        box.style.display = 'none';
+        document.body.appendChild(box);
+    }
+
+    box.innerText = msg;
+
+    // type অনুযায়ী color
+    if (type === 'success') {
+        box.style.background = '#28a745'; // green
+    } else if (type === 'error') {
+        box.style.background = '#dc3545'; // red
+    } else {
+        box.style.background = '#007bff'; // blue/info
+    }
+
+    box.style.display = 'block';
+
+    // 3 সেকেন্ড পর hide হয়ে যাবে
+    setTimeout(() => {
+        box.style.display = 'none';
+    }, 3000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const product = JSON.parse(localStorage.getItem('selectedProduct'));
 
