@@ -7,6 +7,9 @@ use App\Models\Order;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Cloth;
+use App\Models\Food;
+use App\Models\HealthyFood;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -16,7 +19,7 @@ class AdminController extends Controller
     {
         $totalUsers    = User::count();
         $totalOrders   = Order::count();
-        $totalProducts = Product::count();
+        $totalProducts = Cloth::count() + Food::count() + HealthyFood::count();
         $totalRevenue  = Payment::sum('amount');
 
         return view('admin.dashboard', compact('totalUsers', 'totalOrders', 'totalProducts', 'totalRevenue'));
