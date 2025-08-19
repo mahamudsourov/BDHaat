@@ -72,3 +72,14 @@ Admin
 <img width="647" height="308" alt="Picture13" src="https://github.com/user-attachments/assets/67f4b685-61e8-4e31-a49f-f9ee20fb3f21" />
 <img width="647" height="307" alt="Picture14" src="https://github.com/user-attachments/assets/7b91c0c8-0b5f-4f92-8c1d-979334e34f44" />
 <img width="647" height="214" alt="Picture15" src="https://github.com/user-attachments/assets/e455c026-189f-436a-9737-4737957862c4" />
+
+<br>
+
+
+Demo: Video:
+
+https://github.com/user-attachments/assets/e06cd811-4fc9-4d13-81a3-c035e261d97c
+
+Project Report:
+[BDHAAT_Project_ Report_CSE416.pdf](https://github.com/user-attachments/files/21862588/BDHAAT_Project_.Report_CSE416.pdf)
+
