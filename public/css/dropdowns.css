@@ -1,0 +1,110 @@
+/* dropdowns  */
+.dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.dropdowns details {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    border-radius: 16px;
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.dropdowns details[open] {
+    background: linear-gradient(135deg, #e8f0ff, #f0f4f8);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.dropdowns summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.15rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdowns summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdowns .arrow {
+    transition: transform 0.4s ease;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.dropdowns details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdowns p {
+    margin-top: 12px;
+    font-size: 0.96rem;
+    color: #555;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+
+/* Icons and color accents */
+.dropdowns summary i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+.dropdowns details[data-color="blue"] summary {
+    color: #1e90ff;
+}
+
+.dropdowns details[data-color="green"] summary {
+    color: #28a745;
+}
+
+.dropdowns details[data-color="orange"] summary {
+    color: #fd7e14;
+}
+
+/* Hover effects */
+.dropdowns details:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Smooth paragraph fade-in */
+.dropdowns details[open] p {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dropdowns summary {
+        font-size: 1rem;
+    }
+    .dropdowns p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdowns summary {
+        font-size: 0.95rem;
+    }
+    .dropdowns p {
+        font-size: 0.85rem;
+    }
+}

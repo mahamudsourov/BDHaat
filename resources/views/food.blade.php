@@ -9,7 +9,7 @@
 @section('content')
 
     <section id="product1" class="section-p1">
-        <h2>Our Foods</h2>
+        <h2>Traditional Foods</h2>
         <p>Delicious and Fresh Food</p>
         <div class="pro-container">
             @forelse($foods as $food)

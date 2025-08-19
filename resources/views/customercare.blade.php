@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dropdowns.css') }}">
 @endpush
 @section('content')
     <section id="page-header3" class="about-header">
@@ -20,13 +21,7 @@
         <div class="chatbot-body" id="chatbotBody">
             <!-- Info Card -->
             <div class="info-card">
-                <div class="carousel">
-                    <div class="carousel-track">
-                        <img src="{{ asset('images/sweets1.jpg') }}" alt="Slide 1">
-                        <img src="{{ asset('images/tea.jpg') }}" alt="Slide 2">
-                        <img src="{{ asset('images/khejur1.jpg') }}" alt="Slide 3">
-                    </div>
-                </div>
+
 
                 <!-- Bot Welcome Message -->
                 <div class="bot-welcome">
@@ -37,22 +32,35 @@
                     </div>
                 </div>
 
-
                 <!-- Dropdowns -->
                 <div class="dropdowns">
-                    <details>
-                        <summary>Offers & Discounts</summary>
-                        <p>All current promotions and coupon codes are listed here.</p>
+                    <details data-color="blue">
+                        <summary><i class="fas fa-tags"></i> Offers & Discounts <span class="arrow">▼</span></summary>
+                        <p>All current promotions, coupon codes, and seasonal deals are listed here.</p>
+                        <p>1. Summer Sale: Up to 50% off select items.</p>
+                        <p>2. New Customer Coupon: BDT 200 off on first order.</p>
+                        <p>3. Festive Offer: Extra BDT 100 discount on orders above BDT 1000.</p>
                     </details>
-                    <details>
-                        <summary>Order Related</summary>
-                        <p>Track orders, cancel requests, and manage invoices.</p>
+
+                    <details data-color="green">
+                        <summary><i class="fas fa-truck"></i> Order Related <span class="arrow">▼</span></summary>
+                        <p>Track orders, manage cancellations, and access invoices easily.</p>
+                        <p>1. Track your order with the tracking ID sent to email.</p>
+                        <p>2. Cancel or modify your order within 2 hours of placement.</p>
+                        <p>3. View and download your invoices anytime.</p>
                     </details>
-                    <details>
-                        <summary>Shipping & Delivery Related</summary>
-                        <p>Shipping times, return policies, and pickup options.</p>
+
+                    <details data-color="orange">
+                        <summary><i class="fas fa-shipping-fast"></i> Shipping & Delivery Related <span
+                                class="arrow">▼</span></summary>
+                        <p>Check delivery times, return policies, and pickup options in detail.</p>
+                        <p>1. Standard delivery: 2-4 business days.</p>
+                        <p>2. Express delivery: 1-2 business days.</p>
+                        <p>3. Return policy: 7 days for unused items in original packaging.</p>
                     </details>
                 </div>
+
+
             </div>
 
             <!-- Quick Chat Options -->

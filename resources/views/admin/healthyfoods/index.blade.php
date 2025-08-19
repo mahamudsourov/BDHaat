@@ -12,9 +12,10 @@
         @endif
         <div class="d-flex justify-content-between mb-3">
             {{-- Back Button --}}
-            <a href="{{ url()->previous() }}" class="btn btn-secondary">
-                ⬅ Back
-            </a>
+    <a href="{{ url()->previous() }}" 
+       class="btn btn-outline-secondary d-flex align-items-center px-4 py-2 shadow-sm rounded-3 transition">
+        <i class="fas fa-arrow-left me-2"></i> Back
+    </a>
 
             {{-- Add New Product Button --}}
             <a href="{{ route('admin.healthyfoods.create') }}" class="btn btn-success">

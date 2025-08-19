@@ -18,7 +18,7 @@
     
     {{--  back Button --}}
     <a href="{{ url()->previous() }}" class="btn btn-secondary">
-    ⬅ Back
+     Back
     </a>
 
 

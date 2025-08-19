@@ -159,11 +159,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('healthyfoods/{id}', [HealthyFoodController::class, 'update'])->name('healthyfoods.update');
     Route::delete('healthyfoods/{id}', [HealthyFoodController::class, 'destroy'])->name('healthyfoods.destroy');
 });
-
+//Product Show
 Route::get('/food', [FoodController::class, 'showFrontendFoods'])->name('food');
 Route::get('/healthy_food', [HealthyFoodController::class, 'publicIndex'])->name('healthy_food');
 Route::get('/clothes', [ClothController::class, 'frontendIndex'])->name('clothes');
 
+//Product show In Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Delivered Status

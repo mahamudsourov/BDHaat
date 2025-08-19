@@ -4,7 +4,7 @@
     <h2 class="text-center mb-3">Edit Food</h2>
     {{-- Back Button --}}
         <a href="{{ url()->previous() }}" class="btn btn-secondary">
-            ⬅ Back
+             Back
         </a>
     <form action="{{ route('admin.foods.update', $food->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
