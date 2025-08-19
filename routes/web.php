@@ -14,7 +14,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\ProductManagement\HealthyFoodController;
 use App\Http\Controllers\Admin\ProductManagement\ClothController;
-use App\Http\Controllers\Admin\ProductManagement\FoodController;
+use App\Http\Controllers\Admin\ProductManagement\FoodController; 
+use App\Http\Controllers\SearchController;
 
 
 
@@ -106,6 +107,11 @@ Route::middleware(['auth'])->group(function () {
 
     //Ad -- payments
     Route::get('/admin/payments', [AdminController::class, 'payments'])->name('admin.payments');
+
+  // search
+
+   Route::get('/search', [SearchController::class, 'index'])->name('search');
+   Route::get('/search/suggest', [SearchController::class, 'suggest'])->name('search.suggest'); // optional (AJAX)
 
 
     // 🧮 Grouped Product Management (Healthy Foods, Cloths, Foods)

@@ -44,9 +44,10 @@
         display: none;
         z-index: 9999;
     "></div>
-
-@endsection
-
+    
 @push('scripts')
     <script src="{{ asset('js/product-details.js') }}"></script>
 @endpush
+
+@endsection
+

@@ -114,6 +114,8 @@
         </div>
     </section>
 
+    <!-- Contact Form --> 
+
     <section id="form-details">
         <form id="contactForm" class="contact-form">
             <span class="form-subtitle">Message Us</span>

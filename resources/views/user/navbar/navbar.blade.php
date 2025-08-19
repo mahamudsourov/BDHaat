@@ -9,10 +9,11 @@
 
     <!-- Center: Search Bar + Search Icon + Cart -->
     <div id="search-cart" style="display: flex; align-items: center; gap: 20px;">
-        <div class="search-box">
-            <input type="text" placeholder="Search products..." id="search-bar" />
-            <button id="search-button"><i class="fas fa-search"></i></button>
-        </div>
+        <!-- Search Form -->
+        <form action="{{ route('search') }}" method="GET" class="search-box" style="display:flex; align-items:center;">
+            <input type="text" name="query" placeholder="Search products..." id="search-bar" value="{{ request('query') }}" />
+            <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </form>
 
         <!-- Cart icon with count -->
         <a href="{{ route('cart') }}" id="cart-icon" style="position: relative; font-size: 24px; color: #333;">
