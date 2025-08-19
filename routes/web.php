@@ -81,6 +81,9 @@ Route::delete('/user/orders/{id}', [UserController::class, 'cancelOrder'])
 // ✉️ CONTACT FORM SUBMIT
 // ─────────────────────────────────────────────────────────────
 Route::post('/submit-contact', [ContactController::class, 'store'])->name('contact.submit');
+Route::delete('/admin/messages/{id}', [App\Http\Controllers\AdminController::class, 'deleteMessage'])
+    ->name('admin.messages.destroy');
+
 
 // ─────────────────────────────────────────────────────────────
 // 🛡️ ADMIN ROUTES (Protect with role check)
